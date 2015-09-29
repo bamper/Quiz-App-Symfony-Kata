@@ -1,0 +1,22 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block body %}
+    <div class="row"><br /></div>
+    <div class="row">
+        <div class="large-4 columns large-offset-4 large-centered text-center">
+            <h3>Quiz się skończył.</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-4 columns large-offset-4 large-centered text-center">
+            {% if isSetPrepared == true %}
+                <h3>Następny etap:</h3>
+                <h2>{{ next_start_date.format('Y-m-d H:i:s') }}</h2>
+            {% else %}
+                <h3>W tej chwili następny etap nie jest wyznaczony.</h3>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
