@@ -55,10 +55,15 @@ class BeginController extends Controller
             $user->setPass($encoded);
 
             $UsersToQuizset = UsersToQuizset::createUserSet($user, $quizset);
-            $em->persist($UsersToQuizset);
 
+
+
+            $status = $this->sendEmail($user->getEmail(), $plainPassword);
+
+            $UsersToQuizset->setIsEmailSent(boolval($status));
+
+            $em->persist($UsersToQuizset);
             $em->flush();
-            $this->sendEmail("email", $plainPassword);
         }
 
 
@@ -73,7 +78,7 @@ class BeginController extends Controller
         $message = \Swift_Message::newInstance()
             ->setSubject('Test od Diageo')
             ->setFrom(array('test@diageo.pl' => "Diageo Test"))
-            ->setTo('przemyslaw.kot@gmail.com')
+            ->setTo($email)
             ->setBody(
                 $this->renderView(
                 // app/Resources/views/Emails/registration.html.twig
@@ -95,8 +100,8 @@ class BeginController extends Controller
             )
 
         ;
-        $asd = $this->get('mailer')->send($message);
-        var_dump($asd);
+        return $this->get('mailer')->send($message);
+
     }
 
 
