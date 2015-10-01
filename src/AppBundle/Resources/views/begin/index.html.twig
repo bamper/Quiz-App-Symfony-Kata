@@ -4,15 +4,34 @@
     <div class="row"><br /></div>
     <div class="row">
         <div class="large-4 columns large-offset-4 large-centered text-center">
-            <p>Witamy. Użyj adresu email na który otrzymałes wiadomość oraz hasła w niej zawartego by kontynuować.</p>
+            <p>Witamy. Użyj adresu email, na który otrzymałeś wiadomość oraz hasła w niej zawartego, by kontynuować test.</p>
         </div>
     </div>
-    <div class="row">
+    <div class="row begin">
 
         <div class="large-4 columns large-offset-4 large-centered text-center">
-            {{ form_start(form) }}
-            {{ form_widget(form) }}
-            {{ form_end(form) }}
+            {% if error %}
+                <div>Złe dane logowania.</div>
+            {% endif %}
+
+            <form action="{{ path('login_check') }}" method="post">
+                <input type="hidden" name="_csrf_token"
+                       value="{{ csrf_token('authenticate') }}"
+                        >
+                <label for="username">Adres e-mail:</label>
+                <input type="text" id="username" name="email" value="" />
+
+                <label for="password">Hasło:</label>
+                <input type="password" id="password" name="pass" />
+
+                {#
+                    If you want to control the URL the user
+                    is redirected to on success (more details below)
+                    <input type="hidden" name="_target_path" value="/account" />
+                #}
+
+                <button type="submit" class="button">Zaloguj się</button>
+            </form>
         </div>
 
     </div>

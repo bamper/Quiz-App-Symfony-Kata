@@ -3,6 +3,9 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use AppBundle\Entity\Question;
+use AppBundle\Entity\UsersToQuizset;
+use AppBundle\Entity\Users;
 
 /**
  * QuestionToUserSet
@@ -73,9 +76,9 @@ class QuestionToUserSet
     /**
      * @var string
      *
-     * @ORM\Column(name="hah_user_ans", type="string", length=200, nullable=false)
+     * @ORM\Column(name="hash_user_ans", type="string", length=200, nullable=true)
      */
-    private $hahUserAns;
+    private $hashUserAns;
 
 
 
@@ -248,25 +251,25 @@ class QuestionToUserSet
     }
 
     /**
-     * Set hahUserAns
+     * Set hashUserAns
      *
-     * @param string $hahUserAns
+     * @param string $hashUserAns
      *
      * @return QuestionToUserSet
      */
-    public function setHahUserAns($hahUserAns)
+    public function setHashUserAns($hashUserAns)
     {
-        $this->hahUserAns = $hahUserAns;
+        $this->hashUserAns = $hashUserAns;
 
         return $this;
     }
 
     /**
-     * Get hahUserAns
+     * Get hashUserAns
      *
      * @return string
      */
-    public function getHahUserAns()
+    public function getHashUserAns()
     {
         return $this->hahUserAns;
     }
@@ -279,5 +282,27 @@ class QuestionToUserSet
     public function getId()
     {
         return $this->id;
+    }
+
+    public static function createUserQuestions(Users $User, $Questions, UsersToQuizset $UsersToQuizset){
+        $return = array();
+        $masterHash = $UsersToQuizset->getMasterHash();
+        $setId = $UsersToQuizset->getIdSet();
+        $userId = $User->getId();
+
+        foreach($Questions as $Question ){
+            $qUserSet = new QuestionToUserSet();
+
+            $qUserSet->setIdSet($setId);
+            $qUserSet->setIdQuestion($Question->getId());
+            $qUserSet->setIdUser($userId);
+            $qUserSet->setHashQuestion(md5( $Question->getId() . $masterHash . $Question->getContent() ) );
+            $qUserSet->setHashAns1(md5( $Question->getId() . $masterHash . $Question->getAns1()) );
+            $qUserSet->setHashAns2(md5( $Question->getId() . $masterHash . $Question->getAns2()) );
+            $qUserSet->setHashAns3(md5( $Question->getId() . $masterHash . $Question->getAns3()) );
+            $return[] = $qUserSet;
+        }
+
+        return $return;
     }
 }

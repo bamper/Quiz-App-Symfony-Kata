@@ -3,7 +3,8 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use AppBundle\Entity\Quizset;
+use AppBundle\Entity\Users;
 /**
  * UsersToQuizset
  *
@@ -36,16 +37,16 @@ class UsersToQuizset
     private $idUser;
 
     /**
-     * @var \DateTime
+     * @var integer
      *
-     * @ORM\Column(name="date_start", type="datetime", nullable=true)
+     * @ORM\Column(name="date_start", type="integer", nullable=true)
      */
     private $dateStart;
 
     /**
-     * @var \DateTime
+     * @var integer
      *
-     * @ORM\Column(name="date_end", type="datetime", nullable=true)
+     * @ORM\Column(name="date_end", type="integer", nullable=true)
      */
     private $dateEnd;
 
@@ -116,7 +117,7 @@ class UsersToQuizset
     /**
      * Set dateStart
      *
-     * @param \DateTime $dateStart
+     * @param integer $dateStart
      *
      * @return UsersToQuizset
      */
@@ -130,7 +131,7 @@ class UsersToQuizset
     /**
      * Get dateStart
      *
-     * @return \DateTime
+     * @return integer
      */
     public function getDateStart()
     {
@@ -140,7 +141,7 @@ class UsersToQuizset
     /**
      * Set dateEnd
      *
-     * @param \DateTime $dateEnd
+     * @param integer $dateEnd
      *
      * @return UsersToQuizset
      */
@@ -154,7 +155,7 @@ class UsersToQuizset
     /**
      * Get dateEnd
      *
-     * @return \DateTime
+     * @return integer
      */
     public function getDateEnd()
     {
@@ -217,5 +218,19 @@ class UsersToQuizset
     public function getId()
     {
         return $this->id;
+    }
+
+    public static function createUserSet(Users $user, Quizset $set){
+        $UserQuizSet = new UsersToQuizset();
+        $UserQuizSet->setIdSet($set->getId());
+        $UserQuizSet->setIdUser($user->getId());
+        $UserQuizSet->setMasterHash(md5($user->getId() . $user->getEmail() . time()));
+        return $UserQuizSet;
+    }
+
+    public function isUserAllowed(){
+        if( is_null($this->dateEnd)){
+            return true;
+        }else return false;
     }
 }

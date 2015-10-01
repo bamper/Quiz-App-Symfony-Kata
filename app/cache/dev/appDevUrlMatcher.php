@@ -61,27 +61,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        if (0 === strpos($pathinfo, '/css/3e7b5a2')) {
-            // _assetic_3e7b5a2
-            if ($pathinfo === '/css/3e7b5a2.css') {
-                return array (  '_controller' => 'assetic.controller:render',  'name' => '3e7b5a2',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_3e7b5a2',);
-            }
-
-            if (0 === strpos($pathinfo, '/css/3e7b5a2_part_1_')) {
-                // _assetic_3e7b5a2_0
-                if ($pathinfo === '/css/3e7b5a2_part_1_foundation.min_1.css') {
-                    return array (  '_controller' => 'assetic.controller:render',  'name' => '3e7b5a2',  'pos' => 0,  '_format' => 'css',  '_route' => '_assetic_3e7b5a2_0',);
-                }
-
-                // _assetic_3e7b5a2_1
-                if ($pathinfo === '/css/3e7b5a2_part_1_normalize_2.css') {
-                    return array (  '_controller' => 'assetic.controller:render',  'name' => '3e7b5a2',  'pos' => 1,  '_format' => 'css',  '_route' => '_assetic_3e7b5a2_1',);
-                }
-
-            }
-
-        }
-
         if (0 === strpos($pathinfo, '/_')) {
             // _wdt
             if (0 === strpos($pathinfo, '/_wdt') && preg_match('#^/_wdt/(?P<token>[^/]++)$#s', $pathinfo, $matches)) {
@@ -194,6 +173,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             return array (  '_controller' => 'AppBundle\\Controller\\BeginController::indexAction',  '_route' => 'homepage',);
+        }
+
+        // login_check
+        if ($pathinfo === '/login_check') {
+            return array (  '_controller' => 'AppBundle\\Controller\\BeginController::loginCheckAction',  '_route' => 'login_check',);
+        }
+
+        // sendemail
+        if ($pathinfo === '/sendemail') {
+            return array (  '_controller' => 'AppBundle\\Controller\\BeginController::sendemailAction',  '_route' => 'sendemail',);
         }
 
         // quizpage

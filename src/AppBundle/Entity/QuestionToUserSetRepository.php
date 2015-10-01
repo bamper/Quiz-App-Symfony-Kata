@@ -1,7 +1,7 @@
 <?php
 
 namespace AppBundle\Entity;
-
+use Doctrine\ORM\NoResultException;
 /**
  * QuestionToUserSetRepository
  *
@@ -10,4 +10,70 @@ namespace AppBundle\Entity;
  */
 class QuestionToUserSetRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function getUserQuestions(Users $user, Quizset $quizset )
+    {
+        try{
+            $result = $this->getEntityManager()
+                ->createQuery(
+                    'SELECT us.hashQuestion, us.hashAns1, us.hashAns2, us.hashAns3, us.id, us.idQuestion,
+                          q.content, q.ans1, q.ans2, q.ans3
+                     FROM AppBundle:QuestionToUserSet us, AppBundle:Question q
+                     WHERE us.idSet = :idset AND us.idUser = :user AND q.id = us.idQuestion '
+                )
+                ->setParameter(':idset', $quizset->getId() )
+                ->setParameter(':user' , $user->getId() )
+                ->execute();
+            if(! $result ) return false;
+            return $result;
+        } catch( NoResultException $e){
+            return false;
+        }
+    }
+
+    public function checkUserQuestionsCountEquals($questionCount, $userId, $setId){
+        try{
+            $result = $this->getEntityManager()
+                ->createQueryBuilder()
+                ->select('COUNT(u.id)')
+                ->from('AppBundle:QuestionToUserSet','u')
+                ->where('u.idUser = :userId')
+                ->andWhere('u.idSet = :setId')
+                ->andWhere('u.hashUserAns is NULL')
+                ->setParameter(":userId", $userId)
+                ->setParameter(":setId", $setId)
+                ->getQuery()
+                ->getSingleScalarResult();
+
+            if( $result == $questionCount) return true;
+            return false;
+        } catch( NoResultException $e){
+            return false;
+        }
+    }
+
+    public function saveAns($ans, $hashQuestion, $userId, $quizSetId )
+    {
+        try{
+            $result = $this->getEntityManager()
+                ->createQueryBuilder()
+                ->update('AppBundle:QuestionToUserSet','u')
+                ->set('u.hashUserAns', ':ans' )
+                ->where('u.idUser = :userId')
+                ->andWhere('u.idSet = :setId')
+                ->andWhere('u.hashQuestion = :hashQuestion')
+                ->orWhere('u.hashAns1 = :ans')
+                ->orWhere('u.hashAns2 = :ans')
+                ->orWhere('u.hashAns3 = :ans')
+                ->setParameter(":userId", $userId)
+                ->setParameter(":setId", $quizSetId)
+                ->setParameter(":hashQuestion", $hashQuestion)
+                ->setParameter(":ans", $ans)
+                ->getQuery()
+                ->execute();
+            if(! $result ) return false;
+            return true;
+        } catch( NoResultException $e){
+            return false;
+        }
+    }
 }

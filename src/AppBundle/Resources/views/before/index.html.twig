@@ -1,16 +1,18 @@
 {% extends 'AppBundle::base.html.twig' %}
 
 {% block body %}
-    <div class="row"><br /></div>
-    <div class="row">
-        <div class="large-4 columns large-offset-4 large-centered text-center">
-            <p>Przygotuj się. Czas jest liczony od wyświetlenia strony.</p>
+    <div class="before">
+        <div class="row"><br /></div>
+        <div class="row">
+            <div class="large-4 columns large-offset-4 large-centered text-center">
+                <p>Przygotuj się. Czas jest liczony od wyświetlenia strony.</p>
+            </div>
         </div>
-    </div>
-    <div class="row">
+        <div class="row">
 
-        <div class="large-4 columns large-offset-4 large-centered text-center">
-            <a href="{{ path('quizpage') }}" class="button">Start</a>
+            <div class="large-4 columns large-offset-4 large-centered text-center">
+                <a href="{{ path('quizpage') }}" class="button">Rozpocznij test</a>
+            </div>
         </div>
     </div>
 {% endblock %}

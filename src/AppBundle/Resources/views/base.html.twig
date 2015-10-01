@@ -2,20 +2,71 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Diageo!{% endblock %}</title>
 
             {% stylesheets '@AppBundle/Resources/public/css/*' %}
             <link rel="stylesheet" href="{{ asset_url }}" />
+            <style>
+                html, body, form
+                {
+                    height: 100%;
+                    padding: 0px;
+                }
+
+                .logo {
+                    margin-top: 20px;
+                    margin-bottom: 100px;
+                }
+
+                .before {
+                    margin-bottom: 400px;
+                }
+
+                .begin {
+                    margin-bottom: 300px;
+                }
+
+            </style>
             {% endstylesheets %}
 
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="fullheight">
+            <div class="row logo">
+                <div class=" columns">
+                    <img src="/img/logo.jpg" alt="Diageo" />
+                </div>
+            </div>
+
+            {% block body %}{% endblock %}
+
+            <footer class="row">
+                <div class="large-12 columns">
+                    <hr>
+                    <div class="row">
+                        <div class="large-6 columns">
+                            <p>© by Cocktail System</p>
+                        </div>
+                        <div class="large-6 columns">
+                            <!--
+                            <ul class="inline-list right">
+                                <li><a href="/file/regulamin.pdf">Regulamin</a></li>
+                            </ul>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+
         {% block javascripts %}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
             {% javascripts '@AppBundle/Resources/public/js/*' %}
             <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
         {% endblock %}
+        {% block scripts %}{% endblock %}
     </body>
 </html>

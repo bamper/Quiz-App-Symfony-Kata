@@ -2,4 +2,4 @@ _assetic:
     resource: .
     type: assetic
 _app:
-    resource: /home/red/Workspace/Mine/quizbar/app/config/routing_dev.yml
+    resource: /home/red/Workspace/pandemonium/quizbarman/app/config/routing_dev.yml

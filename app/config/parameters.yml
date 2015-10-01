@@ -6,7 +6,7 @@ parameters:
     database_user: root
     database_password: flaron95t
     mailer_transport: smtp
-    mailer_host: 127.0.0.1
-    mailer_user: null
-    mailer_password: null
-    secret: ThisTokenIsNotSoSecretChangeIt
+    mailer_host: portex.kylos.pl
+    mailer_user: testy@diageo.artcore-studio.pl
+    mailer_password: flaron95t
+    secret: dk1j23kl1j3klj123li123j1il23j

@@ -2,16 +2,22 @@
 
 namespace AppBundle\Controller;
 
+
+
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 use AppBundle\Entity\Quizset;
+use AppBundle\Entity\UsersToQuizset;
+use AppBundle\Entity\QuestionToUserSet;
 
 class BeforeController extends Controller
 {
     private $em;
     private $quizSet;
+    private $userId;
+    private $usersQuizset;
 
     /**
      * @Route("/before", name="beforepage")
@@ -42,8 +48,7 @@ class BeforeController extends Controller
             return  $this->showWarningScreen();
 
             //if user took part in last one and next quiz is not ready
-        }else if(   !$isUserAllowed &&
-                    !$isSetActiveNow){
+        }else{
             return  $this->showTimerScreen($this->quizSet);
         }
     }
@@ -52,14 +57,60 @@ class BeforeController extends Controller
         return $this->em->getRepository('AppBundle:Quizset')->getNearest();
     }
 
-    //TODO: make quiz preparations
     private function prepareUserAndQuizData(){
+        $User = $this->em->getRepository('AppBundle:Users')->findOneById($this->userId);
+
+        //this has to be saved but this is in set
+        //$UsersToQuizset = UsersToQuizset::createUserSet($User, $this->quizSet);
+        //$this->saveToDoctrine($UsersToQuizset);
+
+        $Questions = $this->em->getRepository('AppBundle:Question')->findByIdSet($this->quizSet->getId());
+
+        if( empty($Questions) ){
+            return false;
+        }
+
+        $questionCount = count($Questions);
+
+        $userHasQuestionsGenerated = $this->em->getRepository('AppBundle:QuestionToUserSet')
+                                                    ->checkUserQuestionsCountEquals($questionCount, $this->userId, $this->quizSet->getId());
+
+        if( !$userHasQuestionsGenerated )
+        {
+            $QuestionsToUserSet = QuestionToUserSet::createUserQuestions($User, $Questions, $this->usersQuizset);
+            $this->saveToDoctrine($QuestionsToUserSet);
+        }
+    }
+
+    private function saveToDoctrine($object){
+        if( is_array($object)){
+            foreach($object as $o ) {
+                $this->em->persist($o);
+                $this->em->flush();
+            }
+        } else{
+            $this->em->persist($object);
+            $this->em->flush();
+        }
+
 
     }
 
-    //TODO: make user check
     private function isUserAllowed(){
-        return false;
+        $this->userId = $this->getUser()->getId();
+
+        if( $this->quizSet instanceof Quizset){
+            $this->usersQuizset = $this->em->getRepository('AppBundle:UsersToQuizset')->findOneBy(
+                array(
+                    'idUser' => $this->userId,
+                    'idSet' => $this->quizSet->getId()
+                )
+            );
+
+            return $this->usersQuizset->isUserAllowed();
+
+        }else return false;
+
     }
 
     private function isSetActiveNow(){

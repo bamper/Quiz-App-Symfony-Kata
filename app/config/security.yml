@@ -4,8 +4,13 @@ security:
 
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory:
-            memory: ~
+        our_db_provider:
+            entity:
+                class: AppBundle:Users
+                property: email
+
+    encoders:
+        AppBundle\Entity\Users: sha512
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -15,6 +20,21 @@ security:
 
         main:
             anonymous: ~
+
+            form_login:
+                provider: our_db_provider
+                csrf_provider: security.csrf.token_manager
+                check_path: /login_check
+                login_path: /
+                default_target_path: /before
+                failure_path: /
+
+                username_parameter: email
+                password_parameter: pass
+
+            logout:
+                path: /logout
+
             # activate different ways to authenticate
 
             # http_basic: ~
@@ -22,3 +42,7 @@ security:
 
             # form_login: ~
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+    access_control:
+        - { path: ^/before, roles: ROLE_USER }
+        - { path: ^/quiz, roles: ROLE_USER }
+        - { path: ^/thx, roles: ROLE_USER }

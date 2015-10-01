@@ -1,6 +1,7 @@
 <?php
 
 namespace AppBundle\Entity;
+use Doctrine\ORM\NoResultException;
 
 /**
  * UsersToQuizsetRepository
@@ -10,4 +11,31 @@ namespace AppBundle\Entity;
  */
 class UsersToQuizsetRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    private function saveDate($date, $userId){
+        try{
+            $result = $this->getEntityManager()
+                ->createQueryBuilder()
+                ->update('AppBundle:UsersToQuizset','u')
+                ->set($date, time())
+                ->where('u.idUser = :userId')
+                ->setParameter(":userId", $userId)
+                ->getQuery()
+                ->execute();
+            if(! $result ) return false;
+            return true;
+        } catch( NoResultException $e){
+            return false;
+        }
+    }
+
+    public function saveStartDate($userId){
+        return $this->saveDate('u.dateStart', $userId);
+    }
+
+    public function saveEndDate($userId){
+        return $this->saveDate('u.dateEnd', $userId);
+    }
+
+
 }
