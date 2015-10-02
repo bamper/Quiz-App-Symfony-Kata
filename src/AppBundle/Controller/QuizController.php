@@ -52,7 +52,7 @@ class QuizController extends Controller
     }
 
     private function getUserLoged(){
-        $this->user = $this->em->getRepository('AppBundle:Users')->findOneById(1);
+        $this->user = $this->em->getRepository('AppBundle:Users')->findOneById($this->getUser()->getId());
         $this->userId = $this->getUser()->getId();
 
 

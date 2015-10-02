@@ -40,7 +40,7 @@ class BeginController extends Controller
     /**
      * @Route("/sendemail", name="sendemail")
      */
-    public function sendemailAction(){
+    public function sendemailAction(Request $request){
         $em = $this->getDoctrine()->getManager();
 
         $users = $em->getRepository('AppBundle:Users')->findAll();
@@ -74,10 +74,50 @@ class BeginController extends Controller
         ));
     }
 
+
+    /**
+     * @Route("/sendsingle", name="sendsingle")
+     */
+    public function sendsingleAction(Request $request){
+        $em = $this->getDoctrine()->getManager();
+
+        $user = $em->getRepository('AppBundle:Users')->findOneById(20);
+        $quizset = $em->getRepository('AppBundle:Quizset')->getNearest();
+
+
+        $plainPassword = $this->random_str(8);
+
+        $encoder = $this->container->get('security.password_encoder');
+        $encoded = $encoder->encodePassword($user, $plainPassword);
+
+        $user->setPass($encoded);
+
+        $UsersToQuizset = UsersToQuizset::createUserSet($user, $quizset);
+
+
+
+        $status = $this->sendEmail($user->getEmail(), $plainPassword);
+
+        var_dump($status);
+
+        $UsersToQuizset->setIsEmailSent($status);
+
+        $em->persist($UsersToQuizset);
+        $em->flush();
+
+
+
+
+
+        return $this->render('AppBundle:begin:index.html.twig', array(
+            'error' => ""
+        ));
+    }
+
     private function sendEmail($email, $password){
         $message = \Swift_Message::newInstance()
             ->setSubject('Test od Diageo')
-            ->setFrom(array('test@diageo.pl' => "Diageo Test"))
+            ->setFrom(array('info@diageoprofessionalteam.pl' => "Diageo"))
             ->setTo($email)
             ->setBody(
                 $this->renderView(
@@ -89,6 +129,7 @@ class BeginController extends Controller
                 ),
                 'text/html'
             )
+            /*
             ->addPart(
                 $this->renderView(
                     'AppBundle:emails:info.text.twig',
@@ -97,7 +138,7 @@ class BeginController extends Controller
                         'password' => $password)
                 ),
                 'text/plain'
-            )
+            )*/
 
         ;
         return $this->get('mailer')->send($message);
@@ -114,4 +155,5 @@ class BeginController extends Controller
         }
         return $str;
     }
+
 }
