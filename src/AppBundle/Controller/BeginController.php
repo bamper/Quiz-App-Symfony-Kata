@@ -86,7 +86,7 @@ class BeginController extends Controller
 
 
         $plainPassword = $this->random_str(8);
-
+        var_dump($plainPassword);
         $encoder = $this->container->get('security.password_encoder');
         $encoded = $encoder->encodePassword($user, $plainPassword);
 

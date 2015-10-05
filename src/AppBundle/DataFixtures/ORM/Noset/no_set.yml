@@ -1,0 +1,21 @@
+# AppBundle/DataFixtures/ORM/users.yml
+# user pass: nSiZel8S
+
+
+AppBundle\Entity\Users:
+    user0:
+        id: 1
+        email: test1@test.pl
+        pass: h2WqRBrYRZllAqc/Q+gS7LIzvEWNsWGeHjO0de2SB1qbw+hXpUmQADcFMjQLAZQqBCHUlFvds+N3QwRCthi7Ag==
+    user1:
+        id: 2
+        email: test2@test.pl
+        pass: h2WqRBrYRZllAqc/Q+gS7LIzvEWNsWGeHjO0de2SB1qbw+hXpUmQADcFMjQLAZQqBCHUlFvds+N3QwRCthi7Ag==
+    user2:
+        id: 3
+        email: test3@test.pl
+        pass: h2WqRBrYRZllAqc/Q+gS7LIzvEWNsWGeHjO0de2SB1qbw+hXpUmQADcFMjQLAZQqBCHUlFvds+N3QwRCthi7Ag==
+
+
+
+

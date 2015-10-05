@@ -16,7 +16,7 @@ class QuestionToUserSetRepository extends \Doctrine\ORM\EntityRepository
             $result = $this->getEntityManager()
                 ->createQuery(
                     'SELECT us.hashQuestion, us.hashAns1, us.hashAns2, us.hashAns3, us.id, us.idQuestion,
-                          q.content, q.ans1, q.ans2, q.ans3
+                          q.content, q.ans1, q.ans2, q.ans3, q.type
                      FROM AppBundle:QuestionToUserSet us, AppBundle:Question q
                      WHERE us.idSet = :idset AND us.idUser = :user AND q.id = us.idQuestion '
                 )

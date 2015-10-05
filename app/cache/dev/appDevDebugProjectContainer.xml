@@ -21,12 +21,15 @@
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
       <parameter key="SensioGeneratorBundle">Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle</parameter>
+      <parameter key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</parameter>
+      <parameter key="HautelookAliceBundle">Hautelook\AliceBundle\HautelookAliceBundle</parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">appDevDebugProjectContainer</parameter>
     <parameter key="database_host">127.0.0.1</parameter>
     <parameter key="database_port">null</parameter>
     <parameter key="database_name">quiz</parameter>
+    <parameter key="database_name_test">quiz_test</parameter>
     <parameter key="database_user">root</parameter>
     <parameter key="database_password">flaron95t</parameter>
     <parameter key="mailer_transport">smtp</parameter>
@@ -550,6 +553,11 @@
     <parameter key="sensio_distribution.webconfigurator.secret_step.class">Sensio\Bundle\DistributionBundle\Configurator\Step\SecretStep</parameter>
     <parameter key="sensio_distribution.security_checker.class">SensioLabs\Security\SecurityChecker</parameter>
     <parameter key="sensio_distribution.security_checker.command.class">SensioLabs\Security\Command\SecurityCheckerCommand</parameter>
+    <parameter key="hautelook_alice.locale">en_US</parameter>
+    <parameter key="hautelook_alice.seed">1</parameter>
+    <parameter key="hautelook_alice.loader.yaml.class">Nelmio\Alice\Loader\Yaml</parameter>
+    <parameter key="hautelook_alice.loader.class">Hautelook\AliceBundle\Alice\Loader</parameter>
+    <parameter key="hautelook_alice.solarium.loader.class">Hautelook\AliceBundle\Solarium\Loader</parameter>
     <parameter key="data_collector.templates" type="collection">
       <parameter key="data_collector.config" type="collection">
         <parameter>config</parameter>
@@ -1724,7 +1732,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>560d32ef883f81.40818084</argument>
+            <argument>560eb7394c97d5.79939496</argument>
           </service>
         </argument>
       </argument>
@@ -2000,7 +2008,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>560d32ef883f81.40818084</argument>
+            <argument>560eb7394c97d5.79939496</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2836,6 +2844,23 @@
     <service id="sensio_distribution.security_checker.command" class="SensioLabs\Security\Command\SecurityCheckerCommand">
       <tag name="console.command"/>
       <argument type="service" id="sensio_distribution.security_checker"/>
+    </service>
+    <service id="hautelook_alice.loader.yaml" class="Nelmio\Alice\Loader\Yaml">
+      <argument>en_US</argument>
+      <argument type="collection"/>
+      <argument>1</argument>
+    </service>
+    <service id="hautelook_alice.loader" class="Hautelook\AliceBundle\Alice\Loader">
+      <argument type="collection">
+        <argument key="yaml" type="service" id="hautelook_alice.loader.yaml"/>
+      </argument>
+      <argument type="service" id="logger" on-invalid="null"/>
+    </service>
+    <service id="hautelook_alice.solarium.loader" class="Hautelook\AliceBundle\Solarium\Loader">
+      <argument type="collection">
+        <argument key="yaml" type="service" id="hautelook_alice.loader.yaml"/>
+      </argument>
+      <argument type="service" id="logger" on-invalid="null"/>
     </service>
     <service id="monolog.logger.request" class="Symfony\Bridge\Monolog\Logger">
       <argument>request</argument>

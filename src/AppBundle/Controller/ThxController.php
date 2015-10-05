@@ -52,13 +52,22 @@ class ThxController extends Controller
 
         $userAns = $request->get('quiz');
 
+
         if( count($this->questions) != count($userAns) ){
             return false;
         }
 
 
         foreach($this->questions as $q){
-            $ans = filter_var($userAns[$q['hashQuestion']], FILTER_SANITIZE_STRING);
+
+            if($q['type'] == "radio") {
+                $ans = filter_var($userAns[$q['hashQuestion']], FILTER_SANITIZE_STRING);
+            }
+            if($q['type'] == "checkbox") {
+                $ans = array_map(function($var){return filter_var($var,FILTER_SANITIZE_STRING);}, $userAns[$q['hashQuestion']]);
+                $ans = implode("|", $ans);
+            }
+
 
 
             $result = $this->em->getRepository('AppBundle:QuestionToUserSet')->saveAns($ans, $q['hashQuestion'], $this->user->getId(), $this->quizSet->getId() );

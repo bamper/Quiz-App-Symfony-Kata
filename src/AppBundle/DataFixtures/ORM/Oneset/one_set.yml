@@ -1,0 +1,80 @@
+# AppBundle/DataFixtures/ORM/users.yml
+# user pass: nSiZel8S
+
+
+AppBundle\Entity\Users:
+    user0:
+        id: 1
+        email: test1@test.pl
+        pass: h2WqRBrYRZllAqc/Q+gS7LIzvEWNsWGeHjO0de2SB1qbw+hXpUmQADcFMjQLAZQqBCHUlFvds+N3QwRCthi7Ag==
+
+    user1:
+        id: 2
+        email: test2@test.pl
+        pass: h2WqRBrYRZllAqc/Q+gS7LIzvEWNsWGeHjO0de2SB1qbw+hXpUmQADcFMjQLAZQqBCHUlFvds+N3QwRCthi7Ag==
+
+    user2:
+        id: 3
+        email: test3@test.pl
+        pass: h2WqRBrYRZllAqc/Q+gS7LIzvEWNsWGeHjO0de2SB1qbw+hXpUmQADcFMjQLAZQqBCHUlFvds+N3QwRCthi7Ag==
+
+AppBundle\Entity\Quizset:
+    set0:
+        id: 1
+        dateStart: <(new \DateTime('2015-09-01'))>
+        dateEnd: <(new \DateTime('2015-11-01'))>
+
+
+AppBundle\Entity\UsersToQuizset:
+    quiz0:
+        idSet: 1
+        idUser: 1
+        dateStart: 1
+        dateEnd: 10
+        isEmailSent: 1
+        masterHash: 1234
+
+    quiz1:
+        idSet: 1
+        idUser: 2
+        dateStart: 1
+        dateEnd: NULL
+        isEmailSent: 1
+        masterHash: 1234
+
+    quiz2:
+        idSet: 1
+        idUser: 3
+        dateStart: NULL
+        dateEnd: NULL
+        isEmailSent: 1
+        masterHash: 1234
+
+AppBundle\Entity\Question:
+    q1:
+        idSet: 1
+        content: Zapoznanie się z dostępnością produktów na hali należy do zadań
+        ans1: doradcy
+        ans2: supervisora
+        ans3: przedstawiciela Diageo
+        correct: 1
+        type: radio
+
+    q2:
+        idSet: 1
+        content: Ile wizyt powinien odbyć przedstawiciel Diageo podczas trwania akcji?
+        ans1: przynajmniej jedną
+        ans2: przynajmniej trzy
+        ans3: przynajmniej cztery
+        correct: 1
+        type: radio
+
+    q3:
+        idSet: 1
+        content: W razie braków na hali doradca powinien
+        ans1: poinformować o tym przedstawiciela
+        ans2: poinformować o tym supervisora
+        ans3: poinformować o tym kierownika działu alkohole
+        correct: 1
+        type: checkbox
+

@@ -1,0 +1,107 @@
+# AppBundle/DataFixtures/ORM/users.yml
+# user pass: nSiZel8S
+
+AppBundle\Entity\Users:
+    user0:
+        id: 1
+        email: test1@test.pl
+        pass: h2WqRBrYRZllAqc/Q+gS7LIzvEWNsWGeHjO0de2SB1qbw+hXpUmQADcFMjQLAZQqBCHUlFvds+N3QwRCthi7Ag==
+
+    user1:
+        id: 2
+        email: test2@test.pl
+        pass: h2WqRBrYRZllAqc/Q+gS7LIzvEWNsWGeHjO0de2SB1qbw+hXpUmQADcFMjQLAZQqBCHUlFvds+N3QwRCthi7Ag==
+
+    user2:
+        id: 3
+        email: test3@test.pl
+        pass: h2WqRBrYRZllAqc/Q+gS7LIzvEWNsWGeHjO0de2SB1qbw+hXpUmQADcFMjQLAZQqBCHUlFvds+N3QwRCthi7Ag==
+
+AppBundle\Entity\Quizset:
+    set0:
+        id: 1
+        dateStart: 2012-01-01 01:00:00
+        dateEnd: 2012-01-01 23:23:23
+
+    set1:
+        id: 2
+        dateStart: <date('Y-m-d 22:00:00')>
+        dateEnd: <date('Y-m-d 23:59:59')>
+
+AppBundle\Entity\UsersToQuizset:
+    quiz0:
+        id_set: 1
+        id_user: 1
+        dateStart: 1
+        dateEnd: 10
+        is_email_sent: 1
+        masterHash: 1234
+
+    quiz1:
+        id_set: 1
+        id_user: 2
+        dateStart: 1
+        dateEnd: NULL
+        is_email_sent: 1
+        masterHash: 1234
+
+    quiz2:
+        id_set: 1
+        id_user: 3
+        dateStart: NULL
+        dateEnd: NULL
+        is_email_sent: 1
+        masterHash: 1234
+
+    quiz3:
+        id_set: 2
+        id_user: 1
+        dateStart: NULL
+        dateEnd: NULL
+        is_email_sent: 1
+        masterHash: 1234
+
+    quiz4:
+        id_set: 2
+        id_user: 2
+        dateStart: NULL
+        dateEnd: NULL
+        is_email_sent: 1
+        masterHash: 1234
+
+    quiz5:
+        id_set: 2
+        id_user: 3
+        dateStart: NULL
+        dateEnd: NULL
+        is_email_sent: 1
+        masterHash: 1234
+
+AppBundle\Entity\Questions:
+    q1:
+        isSet: 1
+        content: Zapoznanie się z dostępnością produktów na hali należy do zadań
+        ans_1: doradcy
+        ans_1: supervisora
+        ans_1: przedstawiciela Diageo
+        correct: 1
+        type: radio
+
+    q2:
+        isSet: 1
+        content: Ile wizyt powinien odbyć przedstawiciel Diageo podczas trwania akcji?
+        ans_1: przynajmniej jedną
+        ans_1: przynajmniej trzy
+        ans_1: przynajmniej cztery
+        correct: 1
+        type: radio
+
+    q3:
+        isSet: 1
+        content: W razie braków na hali doradca powinien
+        ans_1: poinformować o tym przedstawiciela
+        ans_1: poinformować o tym supervisora
+        ans_1: poinformować o tym kierownika działu alkohole
+        correct: 1
+        type: checkbox
+
