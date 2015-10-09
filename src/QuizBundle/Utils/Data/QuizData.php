@@ -10,6 +10,8 @@ namespace QuizBundle\Utils\Data;
 
 
 use Doctrine\ORM\EntityManager;
+use AppBundle\Entity\QuestionToUserSet;
+use InvalidArgumentException;
 
 class QuizData {
 
@@ -17,7 +19,8 @@ class QuizData {
 
     public function __construct(EntityManager $em)
     {
-        if( !is_null($this->em) )
+
+        if( !is_null($em) )
         {
             $this->em = $em;
         }else throw new InvalidArgumentException('Entity Manager is NULL');
@@ -41,6 +44,56 @@ class QuizData {
                 'idUser' => $userId,
                 'idSet' => $quizId
             )
+
         );
+    }
+
+    public function getQuestionsForUser($User, $QuizSet)
+    {
+        return $this->em->getRepository('AppBundle:QuestionToUserSet')->getUserQuestions($User, $QuizSet);
+    }
+
+    public function prepareQuestionsForUser($User, $UserQuizSet )
+    {
+        $Questions = $this->em->getRepository('AppBundle:Question')->findByIdSet($UserQuizSet->getIdSet());
+
+        if( empty($Questions) ){
+            return false;
+        }
+
+        $questionCount = count($Questions);
+
+        $userHasQuestionsGenerated = $this->em->getRepository('AppBundle:QuestionToUserSet')
+            ->checkUserQuestionsCountEquals($questionCount, $User->getId(), $UserQuizSet->getIdSet());
+
+        if( !$userHasQuestionsGenerated )
+        {
+            $QuestionsToUserSet = QuestionToUserSet::createUserQuestions($User, $Questions, $UserQuizSet);
+            $this->saveToDoctrine($QuestionsToUserSet);
+        }
+    }
+
+    public function saveStartTime($userId)
+    {
+        $this->em->getRepository('AppBundle:UsersToQuizset')->saveStartDate($userId);
+    }
+
+    public function saveEndTime($userId)
+    {
+        $this->em->getRepository('AppBundle:UsersToQuizset')->saveEndDate($userId);
+    }
+
+    private function saveToDoctrine($object){
+        if( is_array($object)){
+            foreach($object as $o ) {
+                $this->em->persist($o);
+                $this->em->flush();
+            }
+        } else{
+            $this->em->persist($object);
+            $this->em->flush();
+        }
+
+
     }
 }

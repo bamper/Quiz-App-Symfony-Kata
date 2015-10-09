@@ -7,6 +7,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
+use QuizBundle\Utils\Quiz;
+use QuizBundle\Utils\Data\QuizData;
+
 class QuizController extends Controller
 {
     private $em;
@@ -14,6 +17,7 @@ class QuizController extends Controller
     private $user;
     private $userId;
     private $questions;
+    private $Quiz;
 
     /**
      * @Route("/quiz", name="quizpage")
@@ -22,63 +26,30 @@ class QuizController extends Controller
     {
         $this->em = $this->getDoctrine()->getManager();
 
-        $isSetActive = $this->getSet();
-        if( !$isSetActive ){
-            return $this->redirectToRoute('homepage');
-        }
+        $this->Quiz = new Quiz($this->getUser()->getId(), new QuizData($this->em));
 
-        $canTakeQuiz = $this->getUserLoged();
-        if( !$canTakeQuiz ){
+        return $this->decideWhatToShow();
+    }
+
+    public function decideWhatToShow()
+    {
+        $state = $this->Quiz->decideWhatToDo();
+        if( $state == "warning" || $state == "timer")
+        {
             return $this->redirectToRoute('beforepage');
         }
 
-
-        $this->getQuestionsForUser();
-        $this->makeImageQuestions();
-        $this->saveTime();
-
         // replace this example code with whatever you need
         return $this->render('AppBundle:quiz:index.html.twig', array(
-            'questions' => $this->questions
+            'questions' => $this->getQuestionsForUser()
         ));
     }
 
-    private function saveTime(){
-        $this->em->getRepository('AppBundle:UsersToQuizset')->saveStartDate($this->user->getId());
-    }
-
-    private function makeImageQuestions(){
-
-    }
-
-    private function getUserLoged(){
-        $this->user = $this->em->getRepository('AppBundle:Users')->findOneById($this->getUser()->getId());
-        $this->userId = $this->getUser()->getId();
-
-
-        $usersQuizset = $this->em->getRepository('AppBundle:UsersToQuizset')->findOneBy(
-            array(
-                'idUser' => $this->userId,
-                'idSet' => $this->quizSet->getId()
-            )
-        );
-
-        return $usersQuizset->isUserAllowed();
-
-
-    }
-
     private function getQuestionsForUser(){
-        $this->questions = $this->em->getRepository('AppBundle:QuestionToUserSet')->getUserQuestions($this->user, $this->quizSet);
+        $questions = $this->Quiz->getQuestionsForUser();
+        $this->Quiz->makeImageQuestions();
+        $this->Quiz->saveStartTime();
+        return $questions;
     }
 
-    private function getSet(){
-        $this->quizSet = $this->em->getRepository('AppBundle:Quizset')->getNearest();
-        if($this->quizSet instanceof Quizset ){
-            if( $this->quizSet->isActiveNow() ){
-                return true;
-            }
-        }
-        return false;
-    }
 }
