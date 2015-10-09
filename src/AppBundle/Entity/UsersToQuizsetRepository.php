@@ -22,6 +22,7 @@ class UsersToQuizsetRepository extends \Doctrine\ORM\EntityRepository
                 ->setParameter(":userId", $userId)
                 ->getQuery()
                 ->execute();
+
             if(! $result ) return false;
             return true;
         } catch( NoResultException $e){
@@ -35,6 +36,48 @@ class UsersToQuizsetRepository extends \Doctrine\ORM\EntityRepository
 
     public function saveEndDate($userId){
         return $this->saveDate('u.dateEnd', $userId);
+    }
+
+    public function userTookQuiz($userId, $quizsetID)
+    {
+
+        try{
+            $result = $this->getEntityManager()
+                ->createQueryBuilder()
+                ->select('u')
+                ->from('AppBundle:UsersToQuizset','u')
+                ->where('u.idUser = :userId')
+                ->andWhere('u.idSet = :quizId')
+                ->andWhere('u.dateStart IS NOT NULL')
+                ->andWhere('u.dateEnd IS NOT NULL')
+                ->setParameter(":userId", $userId)
+                ->setParameter(":quizId", $quizsetID)
+                ->getQuery()
+                ->execute();
+
+            if(! $result ) return false;
+            return true;
+        } catch( NoResultException $e){
+            return false;
+        }
+    }
+
+    public function getUsersWhoFinished($quizSetId){
+        try{
+            $result = $this->getEntityManager()
+                ->createQuery(
+                    'SELECT u.email, u.id, uq.dateStart, uq.dateEnd, uq.idSet
+                     FROM AppBundle:Users u, AppBundle:UsersToQuizset uq
+                     WHERE u.id = uq.idUser AND uq.dateStart IS NOT NULL AND uq.dateEnd IS NOT NULL AND
+                           uq.idSet = :idset'
+                )
+                ->setParameter(':idset', $quizSetId )
+                ->execute();
+            if(! $result ) return false;
+            return $result;
+        }catch (NoResultException $e){
+            return false;
+        }
     }
 
 

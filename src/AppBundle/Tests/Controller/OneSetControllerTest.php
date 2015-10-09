@@ -63,9 +63,9 @@ class OneSetControllerTest extends WebTestCase
     }
 
     /**
-     * @dataProvider dataProviderUsers
+     * @dataProvider dataProviderUsersForQuiz
      */
-    public function testEnteringQuiz($login, $pass, $text, $checker){
+    public function testEnteringQuiz($login, $pass, $data){
 
         $client = static::createClient();
         $client->followRedirects();
@@ -80,8 +80,32 @@ class OneSetControllerTest extends WebTestCase
         $crawler = $client->submit($form);
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertEquals($num,
-            $crawler->filter('html:contains("'.$text.'")')->count());
+        $this->assertEquals($data['after_login_text_count'],
+            $crawler->filter('html:contains("'.$data['after_login'].'")')->count());
+
+
+        if( $data['can_quiz'] )
+        {
+            $link = $crawler
+                ->filter('a.button:contains("Rozpocznij test")') // find all links with the text "Greet"
+                ->eq(0) // select the second link in the list
+                ->link()
+            ;
+            $crawler = $client->click($link);
+
+            $this->assertEquals(200, $client->getResponse()->getStatusCode());
+            $this->assertEquals(1,
+                $crawler->filter('input.button')->count());
+
+            if($data['click_end'] == "Zapisz")
+            {
+                $radio_count = $crawler->filter(".question.radio")->count();
+                $checkbox_count = $crawler->filter(".question.checkbox")->count();
+                $this->assertEquals($data['number_of_radios'], $radio_count);
+                $this->assertEquals($data['number_of_checkboxes'], $checkbox_count);
+            }
+
+        }
     }
 
     public function dataProviderUsersForQuiz()

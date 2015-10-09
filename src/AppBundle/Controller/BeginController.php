@@ -41,10 +41,26 @@ class BeginController extends Controller
      * @Route("/sendemail", name="sendemail")
      */
     public function sendemailAction(Request $request){
+
         $em = $this->getDoctrine()->getManager();
 
         $users = $em->getRepository('AppBundle:Users')->findAll();
+        //$user = $em->getRepository('AppBundle:Users')->findOneById(21);
         $quizset = $em->getRepository('AppBundle:Quizset')->getNearest();
+
+        /*
+        $usersToSend = array();
+        foreach($users as $user)
+        {
+            $took = $em->getRepository('AppBundle:UsersToQuizset')->userTookQuiz($user->getId(),$quizset->getId() );
+
+            if( !$took ){
+                $usersToSend[] =  $user;
+            }
+
+
+        }
+        */
 
         foreach($users as $user){
             $plainPassword = $this->random_str(8);
@@ -58,19 +74,78 @@ class BeginController extends Controller
 
 
 
-            $status = $this->sendEmail($user->getEmail(), $plainPassword);
+            $status = $this->sendEmail($user->getEmail(), $plainPassword, $quizset);
 
-            $UsersToQuizset->setIsEmailSent(boolval($status));
+            $UsersToQuizset->setIsEmailSent(($status));
 
             $em->persist($UsersToQuizset);
             $em->flush();
         }
 
-
-
-
         return $this->render('AppBundle:begin:index.html.twig', array(
             'error' => ""
+        ));
+    }
+
+    /**
+     * @Route("/getwinners", name="getwinners")
+     */
+    public function getwinnersAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $questionRepo = $em->getRepository('AppBundle:QuestionToUserSet');
+
+        $users = $em->getRepository('AppBundle:UsersToQuizset')->getUsersWhoFinished(7);
+
+
+        $parsedData = array();
+        foreach($users as $user)
+        {
+            $parsedData[$user['id']] =  array('user' => $user, 'answer' =>array());
+
+
+            $seconds = $user['dateEnd'] - $user['dateStart'];
+            $parsedData[$user['id']]['user']['time'] = array('min' => floor($seconds / 60),'sec' => ($seconds % 60) ) ;
+            $answers = $questionRepo->getUserAnswers($user['id'], $user['idSet']);
+
+            $parsedData[$user['id']]['user']['correct'] = 0;
+            foreach($answers as $answer)
+            {
+
+                $parsedData[$user['id']]['answer'][$answer['id']]['content'] = $answer['content'];
+
+                $userAnswer = explode("|", $answer['hashUserAns']);
+                $counted = false;
+
+                for($i = 1; $i <= 3; $i++)
+                {
+
+
+                    if(in_array($answer['hashAns'.$i], $userAnswer))
+                    {
+
+                        $parsedData[$user['id']]['answer'][$answer['id']]['answer'] = $answer['ans'.$i];
+                        $parsedData[$user['id']]['answer'][$answer['id']]['correct'] = $answer['ans' . $answer['correct']];
+
+                        $isCorrect = 'NIE';
+                        if( $i == $answer['correct']) {
+                            $isCorrect = 'TAK';
+                            if(!$counted) {
+                                $parsedData[$user['id']]['user']['correct'] += 1;
+                                $counted = true;
+                            }
+                        }
+                        $parsedData[$user['id']]['answer'][$answer['id']]['iscorrect'] = $isCorrect;
+                    }
+                }
+
+            }
+
+
+        }
+
+        return $this->render('AppBundle:begin:answer.html.twig', array(
+            'answers' => $parsedData
         ));
     }
 
@@ -81,7 +156,7 @@ class BeginController extends Controller
     public function sendsingleAction(Request $request){
         $em = $this->getDoctrine()->getManager();
 
-        $user = $em->getRepository('AppBundle:Users')->findOneById(20);
+        $user = $em->getRepository('AppBundle:Users')->findOneById(61);
         $quizset = $em->getRepository('AppBundle:Quizset')->getNearest();
 
 
@@ -96,7 +171,7 @@ class BeginController extends Controller
 
 
 
-        $status = $this->sendEmail($user->getEmail(), $plainPassword);
+        $status = $this->sendEmail($user->getEmail(), $plainPassword, $quizset);
 
         var_dump($status);
 
@@ -114,9 +189,9 @@ class BeginController extends Controller
         ));
     }
 
-    private function sendEmail($email, $password){
+    private function sendEmail($email, $password, $quizset){
         $message = \Swift_Message::newInstance()
-            ->setSubject('Test od Diageo')
+            ->setSubject('Diageo - wypełnij test!')
             ->setFrom(array('info@diageoprofessionalteam.pl' => "Diageo"))
             ->setTo($email)
             ->setBody(
@@ -125,7 +200,9 @@ class BeginController extends Controller
                     'AppBundle:emails:info.html.twig',
                     array(
                         'adress' => "http://diageoprofessionalteam.pl",
-                        'password' => $password)
+                        'password' => $password,
+                        'start_date' => $quizset->getDateStart(),
+                        'end_date' => $quizset->getDateEnd())
                 ),
                 'text/html'
             )

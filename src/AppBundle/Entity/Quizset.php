@@ -95,6 +95,20 @@ class Quizset
         return $this->id;
     }
 
+    /**
+     * Set id
+     *
+     * @param integer $id
+     *
+     * @return Quizset
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
     public function isActiveNow(){
         $now = new \DateTime('NOW');
         if( $now >= $this->dateStart && $now <= $this->dateEnd )

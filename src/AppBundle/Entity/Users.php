@@ -86,6 +86,20 @@ class Users implements UserInterface, \Serializable
     }
 
     /**
+     * Set id
+     *
+     * @param integer $id
+     *
+     * @return Quizset
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
      * Get id
      *
      * @return integer

@@ -30,6 +30,28 @@ class QuestionToUserSetRepository extends \Doctrine\ORM\EntityRepository
         }
     }
 
+
+
+    public function getUserAnswers($userId, $quizsetId )
+    {
+        try{
+            $result = $this->getEntityManager()
+                ->createQuery(
+                    'SELECT us.hashQuestion, us.hashAns1, us.hashAns2, us.hashAns3, us.hashUserAns, us.id, us.idQuestion,
+                            q.content, q.ans1, q.ans2, q.ans3, q.type, q.correct
+                    FROM AppBundle:QuestionToUserSet us, AppBundle:Question q
+                    WHERE us.idSet = :idset AND us.idUser = :user AND q.id = us.idQuestion'
+                )
+                ->setParameter(':idset', $quizsetId )
+                ->setParameter(':user' , $userId )
+                ->execute();
+            if(! $result ) return false;
+            return $result;
+        } catch( NoResultException $e){
+            return false;
+        }
+    }
+
     public function checkUserQuestionsCountEquals($questionCount, $userId, $setId){
         try{
             $result = $this->getEntityManager()

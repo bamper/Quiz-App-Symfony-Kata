@@ -106,7 +106,7 @@ class BeforeController extends Controller
                     'idSet' => $this->quizSet->getId()
                 )
             );
-
+            if(is_null($this->usersQuizset)) return false;
             return $this->usersQuizset->isUserAllowed();
 
         }else return false;
