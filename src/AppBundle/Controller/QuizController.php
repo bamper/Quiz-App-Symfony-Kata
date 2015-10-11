@@ -13,10 +13,6 @@ use QuizBundle\Utils\Data\QuizData;
 class QuizController extends Controller
 {
     private $em;
-    private $quizSet;
-    private $user;
-    private $userId;
-    private $questions;
     private $Quiz;
 
     /**

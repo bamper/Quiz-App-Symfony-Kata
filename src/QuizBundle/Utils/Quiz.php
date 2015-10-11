@@ -12,6 +12,7 @@ use QuizBundle\Utils\Data\QuizData;
 use Doctrine\ORM\EntityManager;
 use InvalidArgumentException;
 use AppBundle\Entity\Quizset;
+use Symfony\Component\HttpFoundation\Request;
 
 class Quiz {
 
@@ -23,6 +24,7 @@ class Quiz {
     private $isSetActive;
     private $em;
     private $dataProvider;
+    private $questions;
 
     public function __construct($userId, QuizData $qd)
     {
@@ -109,13 +111,42 @@ class Quiz {
 
     public function getQuestionsForUser()
     {
-        $questions = $this->dataProvider->getQuestionsForUser($this->User, $this->QuizSet);
-        return $questions;
+        $this->questions = $this->dataProvider->getQuestionsForUser($this->User, $this->QuizSet);
+        return $this->questions;
     }
 
     public function makeImageQuestions()
     {
 
+    }
+
+    public function saveQuiz(Request $request)
+    {
+        $this->getQuestionsForUser();
+
+        $userAns = $request->get('quiz');
+
+        if( count($this->questions) != count($userAns) ){
+            return false;
+        }
+
+        foreach($this->questions as $q){
+            $ans = null;
+            if($q['type'] == "radio") {
+                $ans = filter_var($userAns[$q['hashQuestion']], FILTER_SANITIZE_STRING);
+            }
+
+            if($q['type'] == "checkbox") {
+                $ans = array_map(function($var){return filter_var($var,FILTER_SANITIZE_STRING);}, $userAns[$q['hashQuestion']]);
+                $ans = implode("|", $ans);
+            }
+
+            $result = $this->dataProvider->saveAns($ans, $q['hashQuestion'], $this->User->getId(), $this->QuizSet->getId() );
+
+            if ( !$result ) return false;
+        }
+
+        return true;
     }
 
     public function isQuizActive()

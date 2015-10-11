@@ -3,6 +3,11 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\Mapping\Entity;
+use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\ORM\Mapping\JoinColumns;
+use Doctrine\ORM\Mapping\OneToMany;
 
 /**
  * Quizset
@@ -12,6 +17,11 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Quizset
 {
+    public function __construct()
+    {
+        $this->questions = new ArrayCollection();
+    }
+
     /**
      * @var integer
      *
@@ -35,7 +45,11 @@ class Quizset
      */
     private $dateEnd;
 
-
+    /**
+     *
+     * @ORM\OneToMany(targetEntity="Question", mappedBy="quizset")
+     */
+    private $questions;
 
     /**
      * Set dateStart
@@ -117,6 +131,10 @@ class Quizset
         }else{
             return false;
         }
+    }
+
+    public function __toString(){
+        return "( ".$this->dateStart->format("Y-m-d H:i") . " - " . $this->dateEnd->format('Y-m-d H:i') . " )" ;
     }
 
 }

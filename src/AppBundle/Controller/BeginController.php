@@ -42,25 +42,11 @@ class BeginController extends Controller
      */
     public function sendemailAction(Request $request){
 
+        /*
         $em = $this->getDoctrine()->getManager();
 
         $users = $em->getRepository('AppBundle:Users')->findAll();
-        //$user = $em->getRepository('AppBundle:Users')->findOneById(21);
         $quizset = $em->getRepository('AppBundle:Quizset')->getNearest();
-
-        /*
-        $usersToSend = array();
-        foreach($users as $user)
-        {
-            $took = $em->getRepository('AppBundle:UsersToQuizset')->userTookQuiz($user->getId(),$quizset->getId() );
-
-            if( !$took ){
-                $usersToSend[] =  $user;
-            }
-
-
-        }
-        */
 
         foreach($users as $user){
             $plainPassword = $this->random_str(8);
@@ -85,6 +71,7 @@ class BeginController extends Controller
         return $this->render('AppBundle:begin:index.html.twig', array(
             'error' => ""
         ));
+        */
     }
 
     /**
@@ -92,6 +79,7 @@ class BeginController extends Controller
      */
     public function getwinnersAction(Request $request)
     {
+        /*
         $em = $this->getDoctrine()->getManager();
         $questionRepo = $em->getRepository('AppBundle:QuestionToUserSet');
 
@@ -147,6 +135,7 @@ class BeginController extends Controller
         return $this->render('AppBundle:begin:answer.html.twig', array(
             'answers' => $parsedData
         ));
+        */
     }
 
 
@@ -154,6 +143,7 @@ class BeginController extends Controller
      * @Route("/sendsingle", name="sendsingle")
      */
     public function sendsingleAction(Request $request){
+        /*
         $em = $this->getDoctrine()->getManager();
 
         $user = $em->getRepository('AppBundle:Users')->findOneById(61);
@@ -187,9 +177,11 @@ class BeginController extends Controller
         return $this->render('AppBundle:begin:index.html.twig', array(
             'error' => ""
         ));
+        */
     }
 
     private function sendEmail($email, $password, $quizset){
+        /*
         $message = \Swift_Message::newInstance()
             ->setSubject('Diageo - wypełnij test!')
             ->setFrom(array('info@diageoprofessionalteam.pl' => "Diageo"))
@@ -206,7 +198,7 @@ class BeginController extends Controller
                 ),
                 'text/html'
             )
-            /*
+
             ->addPart(
                 $this->renderView(
                     'AppBundle:emails:info.text.twig',
@@ -215,11 +207,11 @@ class BeginController extends Controller
                         'password' => $password)
                 ),
                 'text/plain'
-            )*/
+            )
 
         ;
         return $this->get('mailer')->send($message);
-
+        */
     }
 
 

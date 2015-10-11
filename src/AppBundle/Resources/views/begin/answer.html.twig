@@ -1,50 +1,33 @@
 {% extends 'AppBundle::base.html.twig' %}
 
 {% block body %}
-    <div class="row"><br /></div>
-    <div class="row">
-        <div class="large-4 columns large-offset-4 large-centered text-center">
-            <p>Witamy. Użyj adresu email, na który otrzymałeś wiadomość oraz hasła w niej zawartego, by kontynuować test.</p>
-        </div>
-    </div>
     <div class="row begin">
 
         <div class="columns text-center">
 
-            {% for quiz in answers %}
-            <p>Email: {{ quiz.user.email }}</p>
-            <p>Czas: {{ quiz.user.time.min }} minut, {{ quiz.user.time.sec }} sekund</p>
-            <p>Ilość poprawnych odpowiedzi: {{ quiz.user.correct }}</p>
-            <!--
             <table>
                 <thead>
-                <tr>
-                    <th>Pytanie</th>
-                    <th>Opowiedź</th>
-                    <th>Poprawna odpowiedź</th>
-                    <th>Czy jest poprawna?</th>
-                </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>Czas w którym rozwiązano quiz</td>
+                        <td>Ilość poporawnych odpowiedzi</td>
+                    </tr>
                 </thead>
                 <tbody>
-                {% for ans in quiz.answer %}
-                <tr>
-                    <td>{{ ans.content }}</td>
-                    <td>{{ ans.answer }}</td>
-                    <td>{{ ans.correct }}</td>
-                    <td>{{ ans.iscorrect }}</td>
-                </tr>
-
+                {% for quiz in answers %}
+                    <tr>
+                        <td>{{ quiz.user.email }}</td>
+                        <td>{{ quiz.user.time.min }} minut, {{ quiz.user.time.sec }} sekund</td>
+                        <td>{{ quiz.user.correct }}</td>
+                    </tr>
                 {% endfor %}
                 </tbody>
             </table>
-            -->
-            {% endfor %}
+
 
         </div>
 
     </div>
-
-
 {% endblock %}
 
 {% block stylesheets %}

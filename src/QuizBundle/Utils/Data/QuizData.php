@@ -83,6 +83,11 @@ class QuizData {
         $this->em->getRepository('AppBundle:UsersToQuizset')->saveEndDate($userId);
     }
 
+    public function saveAns($ans, $hashQuestion, $userId, $quizId)
+    {
+        return $this->em->getRepository('AppBundle:QuestionToUserSet')->saveAns($ans, $hashQuestion, $userId, $quizId );
+    }
+
     private function saveToDoctrine($object){
         if( is_array($object)){
             foreach($object as $o ) {

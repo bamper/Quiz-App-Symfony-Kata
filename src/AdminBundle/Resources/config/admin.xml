@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="sonata.admin.quizset" class="AdminBundle\Admin\QuizsetAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Quiz" label="Etapy quizu"/>
+            <argument />
+            <argument>AppBundle\Entity\Quizset</argument>
+            <argument>AdminBundle:QuizsetAdmin</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>AdminBundle</argument>
+            </call>
+        </service>
+        <service id="sonata.admin.question" class="AdminBundle\Admin\QuestionAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Quiz" label="Pytania"/>
+            <argument />
+            <argument>AppBundle\Entity\Question</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>AdminBundle</argument>
+            </call>
+        </service>
+
+        <service id="sonata.admin.users" class="AdminBundle\Admin\UsersAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Gracze" label="Gracze"/>
+            <argument />
+            <argument>AppBundle\Entity\Users</argument>
+            <argument>AdminBundle:UserAdmin</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>AdminBundle</argument>
+            </call>
+        </service>
+    </services>
+    <!--
+    <services>
+        <service id="admin.example" class="AdminBundle\Example">
+            <argument type="service" id="service_id" />
+            <argument>plain_value</argument>
+            <argument>%parameter_name%</argument>
+        </service>
+    </services>
+    -->
+</container>

@@ -3,6 +3,11 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\Entity;
+use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\ORM\Mapping\JoinColumns;
+use Doctrine\ORM\Mapping\ManyToOne;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Question
@@ -27,6 +32,20 @@ class Question
      * @ORM\Column(name="id_set", type="integer", nullable=false)
      */
     private $idSet;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Quizset", inversedBy="questions")
+     * @ORM\JoinColumn(name="id_set", referencedColumnName="id")
+     */
+    private $quizset;
+
+    public function getQuizset(){
+        return $this->quizset;
+    }
+
+    public function setQuizset($quizset){
+        $this->quizset = $quizset;
+    }
 
     /**
      * @var string
