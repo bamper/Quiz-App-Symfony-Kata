@@ -64,8 +64,8 @@ class UserAdminController extends Controller {
             $UsersToQuizset = UsersToQuizset::createUserSet($user, $quizset);
         }
 
-
-        $status = $this->sendEmail($user->getEmail(), $plainPassword, $quizset);
+        $template = $em->getRepository('AppBundle:EmailTemplate')->findOneById(1);
+        $status = $this->sendEmail($user->getEmail(), $plainPassword, $quizset, $template->getTemplate());
 
         $UsersToQuizset->setIsEmailSent($status);
 
@@ -78,26 +78,31 @@ class UserAdminController extends Controller {
         return new RedirectResponse($this->admin->generateUrl('list'));
     }
 
-    private function sendEmail($email, $password, $quizset){
+    private function sendEmail($email, $password, $quizset, $template){
+        $day_start  = $quizset->getDateStart();
+        $day_end    = $quizset->getDateEnd();
+
+        $twig = clone $this->get('twig');
+        $twig->setLoader(new \Twig_Loader_String());
+
+
+        $renderedTemplate = $twig->render(
+            $template,
+            array(
+                'adress' => "http://diageoprofessionalteam.pl",
+                'haslo' => $password,
+                'dzien_start' => $day_start->format('j'),
+                'dzien_stop' =>  $day_end->format('j'),
+                'godzina_start' => $day_start->format("H:i"),
+                'godzina_stop' => $day_end->format("H:i")
+            ));
+
         $message = \Swift_Message::newInstance()
             ->setSubject('Diageo - wypełnij test!')
             ->setFrom(array('info@diageoprofessionalteam.pl' => "Diageo"))
             ->setTo($email)
-            ->setBody(
-                $this->renderView(
+            ->setBody($renderedTemplate );
 
-                    'AdminBundle:emails:info.html.twig',
-                    array(
-                        'adress' => "http://diageoprofessionalteam.pl",
-                        'password' => $password,
-                        'start_date' => $quizset->getDateStart(),
-                        'end_date' => $quizset->getDateEnd())
-                ),
-                'text/html'
-            )
-
-
-        ;
         return $this->get('mailer')->send($message);
 
     }

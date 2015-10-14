@@ -13,6 +13,7 @@ use Doctrine\ORM\EntityManager;
 use InvalidArgumentException;
 use AppBundle\Entity\Quizset;
 use Symfony\Component\HttpFoundation\Request;
+use QuizBundle\Utils\Anwsers\QuizCollection;
 
 class Quiz {
 
@@ -30,8 +31,6 @@ class Quiz {
     {
         try
         {
-            $this->userId = $userId;
-
             $this->attachDataProvider($qd);
             $this->getNearestQuizSet();
             $this->getUser($userId);
@@ -148,6 +147,21 @@ class Quiz {
 
         return true;
     }
+
+    public static function getQuizAnwsers(QuizData $qd, Quizset $quizset)
+    {
+
+        $users = $qd->getUsersWhoFinished($quizset->getId());
+
+        if(!$users && empty($users))
+        {
+            throw new \InvalidArgumentException("There is no users");
+        }
+        $quizAnsCollection = QuizCollection::create($qd, $users);
+
+        return $quizAnsCollection->getOutcome();
+    }
+
 
     public function isQuizActive()
     {

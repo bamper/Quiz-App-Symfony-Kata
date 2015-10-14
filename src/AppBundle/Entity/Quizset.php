@@ -134,6 +134,9 @@ class Quizset
     }
 
     public function __toString(){
+        if( is_null($this->dateStart) && is_null($this->dateEnd)) return "(none)";
+
+
         return "( ".$this->dateStart->format("Y-m-d H:i") . " - " . $this->dateEnd->format('Y-m-d H:i') . " )" ;
     }
 

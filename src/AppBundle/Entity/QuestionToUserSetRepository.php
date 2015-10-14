@@ -60,7 +60,6 @@ class QuestionToUserSetRepository extends \Doctrine\ORM\EntityRepository
                 ->from('AppBundle:QuestionToUserSet','u')
                 ->where('u.idUser = :userId')
                 ->andWhere('u.idSet = :setId')
-                ->andWhere('u.hashUserAns is NULL')
                 ->setParameter(":userId", $userId)
                 ->setParameter(":setId", $setId)
                 ->getQuery()

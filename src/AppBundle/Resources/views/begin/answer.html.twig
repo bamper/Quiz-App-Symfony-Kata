@@ -16,9 +16,9 @@
                 <tbody>
                 {% for quiz in answers %}
                     <tr>
-                        <td>{{ quiz.user.email }}</td>
-                        <td>{{ quiz.user.time.min }} minut, {{ quiz.user.time.sec }} sekund</td>
-                        <td>{{ quiz.user.correct }}</td>
+                        <td>{{ quiz.email }}</td>
+                        <td>{{ quiz.time.minutes }} minut, {{ quiz.time.seconds }} sekund</td>
+                        <td>{{ quiz.totalCorrect }} / {{ quiz.totalQuestions }}</td>
                     </tr>
                 {% endfor %}
                 </tbody>

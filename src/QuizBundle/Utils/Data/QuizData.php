@@ -73,6 +73,11 @@ class QuizData {
         }
     }
 
+    public function getUserAnwsers($userId, $quizId)
+    {
+        return $this->em->getRepository('AppBundle:QuestionToUserSet')->getUserAnswers($userId, $quizId);
+    }
+
     public function saveStartTime($userId)
     {
         $this->em->getRepository('AppBundle:UsersToQuizset')->saveStartDate($userId);
@@ -86,6 +91,11 @@ class QuizData {
     public function saveAns($ans, $hashQuestion, $userId, $quizId)
     {
         return $this->em->getRepository('AppBundle:QuestionToUserSet')->saveAns($ans, $hashQuestion, $userId, $quizId );
+    }
+
+    public function getUsersWhoFinished($quizId)
+    {
+        return $this->em->getRepository('AppBundle:UsersToQuizset')->getUsersWhoFinished($quizId);
     }
 
     private function saveToDoctrine($object){
