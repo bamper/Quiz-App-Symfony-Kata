@@ -24,5 +24,6 @@ class AnwserFactory {
         {
             return new AnwserCheckbox($anwserData);
         }
+        return false;
     }
 } 

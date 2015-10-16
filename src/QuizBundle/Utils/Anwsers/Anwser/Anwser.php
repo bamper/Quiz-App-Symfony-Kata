@@ -30,7 +30,7 @@ abstract class Anwser {
     abstract protected function prepareUserAnwser($anwser);
     abstract protected function checkAnwsers();
 
-    public function prepareAnwsers($data)
+    protected function prepareAnwsers($data)
     {
         $this->anwsers = array(
             $data['hashAns1'],
@@ -46,6 +46,7 @@ abstract class Anwser {
     }
 
     public function isCorrect(){
+        if(!isset($this->status)) return false;
         return $this->status;
     }
 } 

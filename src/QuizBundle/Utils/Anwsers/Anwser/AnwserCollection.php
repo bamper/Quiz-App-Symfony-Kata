@@ -21,7 +21,7 @@ class AnwserCollection {
                             q.content, q.ans1, q.ans2, q.ans3, q.type, q.correct
      *
      */
-    public function __construct($anwsers)
+    public function __construct(array $anwsers = array())
     {
         $this->anwsers = array();
 
