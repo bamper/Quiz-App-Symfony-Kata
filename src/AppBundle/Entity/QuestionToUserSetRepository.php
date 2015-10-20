@@ -62,9 +62,10 @@ class QuestionToUserSetRepository extends \Doctrine\ORM\EntityRepository
                 ->andWhere('u.idSet = :setId')
                 ->setParameter(":userId", $userId)
                 ->setParameter(":setId", $setId)
+                ->getQuery()
                 ->execute();
-
-            if( !$result ) return $result;
+            
+            if( $result ) return $result;
             return false;
         } catch( NoResultException $e){
             return false;
