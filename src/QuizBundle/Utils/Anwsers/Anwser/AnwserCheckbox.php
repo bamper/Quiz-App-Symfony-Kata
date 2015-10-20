@@ -54,10 +54,21 @@ class AnwserCheckbox extends Anwser {
             $anwserNumber[] = $ans[$ua] + 1;
         }
 
-        $diff = array_diff($anwserNumber, $this->correct);
+        $this->status = $this->isCorrectAnwsers($anwserNumber);
+    }
 
-        if( count($diff) == 0 ){
-            $this->status = true;
+    private function isCorrectAnwsers($anwsers)
+    {
+        $numAns = count($anwsers);
+        $numCorr = count($this->correct);
+
+        if( $numAns != $numCorr ){
+            return false;
+        }else{
+            foreach($anwsers as $ans){
+                if( !in_array($ans, $this->correct)) return false;
+            }
         }
+        return true;
     }
 } 

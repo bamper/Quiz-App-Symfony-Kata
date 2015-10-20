@@ -31,7 +31,7 @@ class EmailAdmin extends Admin
 
         $listMapper
             ->addIdentifier('id')
-            ->addIdentifier('content', 'text', array('label' => 'Treść pytania'))
+            ->addIdentifier('template', 'text', array('label' => 'Treść pytania'))
         ;
     }
 }

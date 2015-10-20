@@ -29,7 +29,7 @@ class EmailTemplate
     /**
      * @var string
      *
-     * @ORM\Column(name="template", type="string", nullable=true)
+     * @ORM\Column(name="template", type="text", nullable=true)
      */
     private $template;
 

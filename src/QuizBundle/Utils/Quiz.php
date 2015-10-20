@@ -31,9 +31,10 @@ class Quiz {
     {
         try
         {
+            $this->userId = $userId;
             $this->attachDataProvider($qd);
             $this->getNearestQuizSet();
-            $this->getUser($userId);
+            $this->getUser();
             $this->getUserQuizSet();
         }
         catch (InvalidArgumentException $e)

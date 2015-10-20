@@ -133,7 +133,7 @@ class QuizsetAdminController extends Controller {
             ->setSubject('Diageo - wypełnij test!')
             ->setFrom(array('info@diageoprofessionalteam.pl' => "Diageo"))
             ->setTo($email)
-            ->setBody($renderedTemplate );
+            ->setBody($renderedTemplate, 'text/hmtl' );
         return $this->get('mailer')->send($message);
 
     }
