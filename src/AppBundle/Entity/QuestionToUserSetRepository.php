@@ -52,20 +52,19 @@ class QuestionToUserSetRepository extends \Doctrine\ORM\EntityRepository
         }
     }
 
-    public function checkUserQuestionsCountEquals($questionCount, $userId, $setId){
+    public function checkUserQuestions($questionCount, $userId, $setId){
         try{
             $result = $this->getEntityManager()
                 ->createQueryBuilder()
-                ->select('COUNT(u.id)')
+                ->select('u')
                 ->from('AppBundle:QuestionToUserSet','u')
                 ->where('u.idUser = :userId')
                 ->andWhere('u.idSet = :setId')
                 ->setParameter(":userId", $userId)
                 ->setParameter(":setId", $setId)
-                ->getQuery()
-                ->getSingleScalarResult();
+                ->execute();
 
-            if( $result == $questionCount) return true;
+            if( !$result ) return $result;
             return false;
         } catch( NoResultException $e){
             return false;

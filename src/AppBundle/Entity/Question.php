@@ -245,6 +245,18 @@ class Question
     }
 
     /**
+     * Set id
+     *
+     * @param integer $id
+     * @return Question
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
+
+    /**
      * Get type
      *
      * @return string

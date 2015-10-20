@@ -65,6 +65,54 @@ class AnwserTest extends \PHPUnit_Framework_TestCase {
                 'type' => "radio",
                 'correct' => 2
             ), 'QuizBundle\Utils\Anwsers\Anwser\AnwserRadio', true
+            ),
+            array(array(
+                'hashQuestion' => 123,
+                'hashAns1' => 2,
+                'hashAns2' => 3,
+                'hashAns3' => 4,
+                'hashUserAns' => 3,
+                'id' => 1,
+                'idQuestion' => 2,
+                'content' => "asdasdad",
+                'ans1' => "asdasda",
+                'ans2' => "asdasda",
+                'ans3' => "asdasdd",
+                'type' => "checkbox",
+                'correct' => 12
+            ), 'QuizBundle\Utils\Anwsers\Anwser\AnwserCheckbox', false
+            ),
+            array(array(
+                'hashQuestion' => 123,
+                'hashAns1' => 2,
+                'hashAns2' => 3,
+                'hashAns3' => 4,
+                'hashUserAns' => "3|2",
+                'id' => 1,
+                'idQuestion' => 2,
+                'content' => "asdasdad",
+                'ans1' => "asdasda",
+                'ans2' => "asdasda",
+                'ans3' => "asdasdd",
+                'type' => "checkbox",
+                'correct' => 12
+            ), 'QuizBundle\Utils\Anwsers\Anwser\AnwserCheckbox', true
+            ),
+            array(array(
+                'hashQuestion' => 123,
+                'hashAns1' => 2,
+                'hashAns2' => 3,
+                'hashAns3' => 4,
+                'hashUserAns' => "3|2",
+                'id' => 1,
+                'idQuestion' => 2,
+                'content' => "asdasdad",
+                'ans1' => "asdasda",
+                'ans2' => "asdasda",
+                'ans3' => "asdasdd",
+                'type' => "checkbox",
+                'correct' => 2
+            ), 'QuizBundle\Utils\Anwsers\Anwser\AnwserCheckbox', false
             )
         );
 

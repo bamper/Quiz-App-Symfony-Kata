@@ -55,7 +55,7 @@ class QuizData {
 
     public function prepareQuestionsForUser($User, $UserQuizSet )
     {
-        $Questions = $this->em->getRepository('AppBundle:Question')->findByIdSet($UserQuizSet->getIdSet());
+        $Questions = $this->getQuestionsForSet($UserQuizSet->getIdSet());
 
         if( empty($Questions) ){
             return false;
@@ -63,14 +63,49 @@ class QuizData {
 
         $questionCount = count($Questions);
 
-        $userHasQuestionsGenerated = $this->em->getRepository('AppBundle:QuestionToUserSet')
-            ->checkUserQuestionsCountEquals($questionCount, $User->getId(), $UserQuizSet->getIdSet());
+        $userQuestionsGenerated = $this->checkUsersQuestions($questionCount, $User->getId(), $UserQuizSet->getIdSet());
 
-        if( !$userHasQuestionsGenerated )
+        if( !$userQuestionsGenerated )
         {
             $QuestionsToUserSet = QuestionToUserSet::createUserQuestions($User, $Questions, $UserQuizSet);
             $this->saveToDoctrine($QuestionsToUserSet);
+            return true;
         }
+
+        $QuestionsToAdd = array();
+        foreach($Questions as $question)
+        {
+            $idQuestion = $question->getId();
+
+            $toAdd = true;
+            foreach($userQuestionsGenerated as $userQuestion)
+            {
+                if($idQuestion == $userQuestion->getIdQuestion()){
+                    $toAdd = false;
+                    break;
+                }
+            }
+            if($toAdd) $QuestionsToAdd[] = $question;
+        }
+
+        if( !empty($QuestionsToAdd) )
+        {
+            $QuestionsToUserSet = QuestionToUserSet::createUserQuestions($User, $QuestionsToAdd, $UserQuizSet);
+            $this->saveToDoctrine($QuestionsToUserSet);
+            return true;
+        }
+        return false;
+    }
+
+    public function checkUsersQuestions($questionCount, $userId, $idSet)
+    {
+        return $this->em->getRepository('AppBundle:QuestionToUserSet')
+            ->checkUserQuestions($questionCount, $userId, $idSet);
+    }
+
+    public function getQuestionsForSet($idSet)
+    {
+        return $this->em->getRepository('AppBundle:Question')->findByIdSet($idSet);
     }
 
     public function getUserAnwsers($userId, $quizId)
