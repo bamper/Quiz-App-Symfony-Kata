@@ -101,7 +101,7 @@ class UserAdminController extends Controller {
             ->setSubject('Diageo - wypełnij test!')
             ->setFrom(array('info@diageoprofessionalteam.pl' => "Diageo"))
             ->setTo($email)
-            ->setBody($renderedTemplate, 'text/hmtl' );
+            ->setBody($renderedTemplate, 'text/html' );
 
         return $this->get('mailer')->send($message);
 

@@ -43,6 +43,7 @@ class QuizController extends Controller
 
     private function getQuestionsForUser(){
         $questions = $this->Quiz->getQuestionsForUser();
+
         $this->Quiz->makeImageQuestions();
         $this->Quiz->saveStartTime();
         return $questions;

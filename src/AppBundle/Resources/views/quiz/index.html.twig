@@ -16,6 +16,8 @@
                 <div class="row question radio">
                 {% elseif question.type == "checkbox" %}
                 <div class="row question checkbox">
+                {% elseif question.type == "textarea" %}
+                    <div class="row question textarea">
                 {% endif %}
 
                     <label><strong>{{ question.content }}</strong></label>
@@ -69,10 +71,16 @@
             var radio_question_count = $('.question.radio').length;
             var radio_count = $("input[type='radio']:checked").length;
 
+            var textarea_question_count = $(".question.textarea").length;
+            var textarea_count = $("textarea[value!='']").length;
+
             var checkbox_question_count = $('.question.checkbox').length;
             var checkbox_count = $(".checkbox:has(input[type='checkbox']:checked)").length;
 
-            if ( (radio_question_count !== radio_count) || (checkbox_question_count !== checkbox_count) ){
+            if ( (radio_question_count !== radio_count) ||
+                 (checkbox_question_count !== checkbox_count)
+                 (textarea_question_count !== textarea_count)
+            ){
                 $('#firstModal').foundation('reveal','open');
             }else{
                 return true;
