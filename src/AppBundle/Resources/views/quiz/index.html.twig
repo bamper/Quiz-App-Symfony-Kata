@@ -41,6 +41,9 @@
                         <label><input type="checkbox" name="quiz[{{ question.hashQuestion }}][]" value="{{ question.hashAns3 }}" />
                             {{ question.ans3 }}</label>
 
+                    {% elseif question.type == "textarea" %}
+                        <label><textarea name="quiz[{{ question.hashQuestion }}]"></textarea>
+                            </label>
                     {% endif %}
                 </div>
                 <br />

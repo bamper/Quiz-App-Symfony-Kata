@@ -21,7 +21,7 @@ class QuestionAdmin extends Admin
             ->add('ans_2', 'text', array('label' => 'Odpowiedź 2'))
             ->add('ans_3', 'text', array('label' => 'Odpowiedź 3'))
             ->add('correct', 'number', array('label' => 'Numer poprawnej odpowiedzi'))
-            ->add('type', 'choice', array('choices' => array('radio' => 'Jedna odpowiedź', 'checkbox' => 'Wielokrotna odpowiedź'), 'label' => 'Typ pytania'))
+            ->add('type', 'choice', array('choices' => array('radio' => 'Jedna odpowiedź', 'checkbox' => 'Wielokrotna odpowiedź', 'textarea' => 'Otwarte pytanie'), 'label' => 'Typ pytania'))
 
         ;
     }

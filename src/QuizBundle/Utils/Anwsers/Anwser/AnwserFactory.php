@@ -24,6 +24,10 @@ class AnwserFactory {
         {
             return new AnwserCheckbox($anwserData);
         }
+        else if( $anwserData['type'] == "textarea")
+        {
+            return new AnwserTextarea($anwserData);
+        }
         return false;
     }
 } 

@@ -136,6 +136,10 @@ class Quiz {
                 $ans = filter_var($userAns[$q['hashQuestion']], FILTER_SANITIZE_STRING);
             }
 
+            if($q['type'] == "textarea") {
+                $ans = filter_var($userAns[$q['hashQuestion']], FILTER_SANITIZE_STRING);
+            }
+
             if($q['type'] == "checkbox") {
                 $ans = array_map(function($var){return filter_var($var,FILTER_SANITIZE_STRING);}, $userAns[$q['hashQuestion']]);
                 $ans = implode("|", $ans);
