@@ -14,6 +14,7 @@ class AnwserTextarea extends Anwser {
 
     public function __construct($data)
     {
+        $this->type = $data['type'];
         $this->status = false;
         $this->idQuestion = $data['idQuestion'];
         $this->prepareCorrectAnwser($data['correct']);
@@ -48,6 +49,12 @@ class AnwserTextarea extends Anwser {
     {
 
         $this->status = $this->isCorrectAnwsers(null);
+    }
+
+    public function getOpenAnwser()
+    {
+
+        return $this->userAnwser;
     }
 
     private function isCorrectAnwsers($anwsers)

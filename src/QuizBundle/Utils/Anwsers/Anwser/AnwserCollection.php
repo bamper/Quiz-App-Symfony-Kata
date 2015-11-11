@@ -9,7 +9,7 @@
 namespace QuizBundle\Utils\Anwsers\Anwser;
 
 use QuizBundle\Utils\Anwsers\Anwser\AnwserFactory;
-
+use QuizBundle\Utils\Anwsers\Anwser\AnwserTextarea;
 
 class AnwserCollection {
 
@@ -38,6 +38,19 @@ class AnwserCollection {
 
     public function getSize(){
         return count($this->anwsers);
+    }
+
+    public function getOpen()
+    {
+        $open = array();
+        foreach($this->anwsers as $ans)
+        {
+            if( $ans->getType() == "textarea")
+            {
+                $open[] = $ans->getOpenAnwser();
+            }
+        }
+        return $open;
     }
 
     public function countCorrect(){

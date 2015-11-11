@@ -38,6 +38,8 @@ return array(
     'Google\\Authenticator\\' => array($vendorDir . '/sonata-project/google-authenticator/lib'),
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
+    'Doctrine\\DBAL\\Migrations\\' => array($vendorDir . '/doctrine/migrations/lib/Doctrine/DBAL/Migrations'),
+    'Doctrine\\Bundle\\MigrationsBundle\\' => array($vendorDir . '/doctrine/doctrine-migrations-bundle'),
     'Doctrine\\Bundle\\FixturesBundle\\' => array($vendorDir . '/doctrine/doctrine-fixtures-bundle'),
     'Doctrine\\Bundle\\DoctrineBundle\\' => array($vendorDir . '/doctrine/doctrine-bundle'),
     'Cocur\\Slugify\\' => array($vendorDir . '/cocur/slugify/src'),

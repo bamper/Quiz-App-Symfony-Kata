@@ -17,7 +17,7 @@ abstract class Anwser {
                             q.content, q.ans1, q.ans2, q.ans3, q.type, q.correct
      *
      */
-
+    protected $type;
     protected $status;
     protected $idQuestion;
     protected $userId;
@@ -43,6 +43,11 @@ abstract class Anwser {
             $data['ans2'],
             $data['ans3']
         );
+    }
+
+    public function getType()
+    {
+        return $this->type;
     }
 
     public function isCorrect(){

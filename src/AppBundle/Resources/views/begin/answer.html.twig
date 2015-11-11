@@ -11,6 +11,7 @@
                         <td>Email</td>
                         <td>Czas w którym rozwiązano quiz</td>
                         <td>Ilość poporawnych odpowiedzi</td>
+                        <td>Otwarte odpowiedzi</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -19,6 +20,13 @@
                         <td>{{ quiz.email }}</td>
                         <td>{{ quiz.time.minutes }} minut, {{ quiz.time.seconds }} sekund</td>
                         <td>{{ quiz.totalCorrect }} / {{ quiz.totalQuestions }}</td>
+                        <td>
+                            {%  for open in quiz.openQuestions %}
+                            {% autoescape %}
+                             - {{ open }}<br />
+                            {% endautoescape %}
+                            {% endfor %}
+                        </td>
                     </tr>
                 {% endfor %}
                 </tbody>

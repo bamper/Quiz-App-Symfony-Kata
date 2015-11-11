@@ -41,11 +41,13 @@ class QuizUser {
     }
 
     public function getOutcome(){
+
         return array(
             'email' => $this->email,
             'time'  => $this->parsedTime,
             'totalQuestions' => $this->anwserCollection->getSize(),
-            'totalCorrect'   => $this->anwserCollection->countCorrect()
+            'totalCorrect'   => $this->anwserCollection->countCorrect(),
+            'openQuestions'  => $this->anwserCollection->getOpen()
         );
     }
 

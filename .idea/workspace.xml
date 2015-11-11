@@ -2,173 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2e10827-f553-4852-977e-0966befbf9d4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/NoSetControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/OneSetControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Oneset/OnesetLoader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Tests/Entity/QuizsetTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Noset/TestLoader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Noset/no_set.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Oneset/one_set.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/two_sets.yml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/1c05a2d3d34656b8766a2802e1ad9e4b3171deb0#indexAction.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/1c05a2d3d34656b8766a2802e1ad9e4b3171deb0.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/4fb7ba329c0b66613ed85a8cd0388ada9604b5f8#decideWhatToShow.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/4fb7ba329c0b66613ed85a8cd0388ada9604b5f8#getNearestSet.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/4fb7ba329c0b66613ed85a8cd0388ada9604b5f8#indexAction.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/4fb7ba329c0b66613ed85a8cd0388ada9604b5f8#isSetActiveNow.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/4fb7ba329c0b66613ed85a8cd0388ada9604b5f8#isUserAllowed.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/4fb7ba329c0b66613ed85a8cd0388ada9604b5f8#prepTimerData.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/4fb7ba329c0b66613ed85a8cd0388ada9604b5f8#prepareUserAndQuizData.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/4fb7ba329c0b66613ed85a8cd0388ada9604b5f8#showStartButtonScreen.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/4fb7ba329c0b66613ed85a8cd0388ada9604b5f8#showTimerScreen.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/4fb7ba329c0b66613ed85a8cd0388ada9604b5f8#showWarningScreen.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/4fb7ba329c0b66613ed85a8cd0388ada9604b5f8.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/597877fc1359850fa8786ead82dcc8f6f491d628#showAction.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/597877fc1359850fa8786ead82dcc8f6f491d628.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#addFlash.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#createAccessDeniedException.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#createForm.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#createFormBuilder.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#createNotFoundException.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#denyAccessUnlessGranted.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#forward.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#generateUrl.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#get.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#getDoctrine.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#getParameter.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#getRequest.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#getUser.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#has.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#isCsrfTokenValid.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#isGranted.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#redirect.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#redirectToRoute.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#render.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#renderView.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#stream.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/67eb7bfea1185df6f89e00b524571fd0d36ed768#indexAction.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/67eb7bfea1185df6f89e00b524571fd0d36ed768.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/69b748bbdb21c9dbce0109b52d28fc1d6404463b#setContainer.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/934cd7a46498da6bc0cccc04b9d9e0a495b93af1#indexAction.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/934cd7a46498da6bc0cccc04b9d9e0a495b93af1.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/a65d01ae6eb0f57fce710aa8bca7a1c0da1c4d5e#render.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/a65d01ae6eb0f57fce710aa8bca7a1c0da1c4d5e.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/aa3b17a06c54069051111edd177f4b93a6b0ac40#toolbarAction.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/aa3b17a06c54069051111edd177f4b93a6b0ac40.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/annotations/ab2e32c3a9e066844b5524146fb38d3df8e8ddeb$hahUserAns.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/appDevUrlGenerator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/appDevUrlGenerator.php.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/appDevUrlMatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/appDevUrlMatcher.php.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/assetic/config/2/2330ac383f12ae6862f522b5693a8d85.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/assetic/config/2/2eb7cd4457e5fdea3cd3b9a69f4c3f8b.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/assetic/config/3/3a4a9f37fb63ed962e14676d8ff310d5.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/assetic/config/4/43a80f0e087752a2d4724591f85aa0e1.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/assetic/config/8/8d790ca0fa66ec97ab5b8c6d59e6b98c.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/assetic/config/a/ae1b290dcfca1cdecd87a85bbe4b1164.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/assetic/config/c/c8291c2bf49773c00a4611d3f8ed0f56.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/assetic/config/d/d8d48bcf943babc09b019665f78d42c5.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/assetic/config/f/ff4d35ae2b4f81e71dc2e5499854faee.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/classes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/classes.php.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/dev/profiler/index.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#addFlash.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#createAccessDeniedException.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#createForm.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#createFormBuilder.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#createNotFoundException.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#denyAccessUnlessGranted.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#forward.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#generateUrl.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#get.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#getDoctrine.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#getParameter.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#getRequest.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#getUser.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#has.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#isCsrfTokenValid.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#isGranted.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#redirect.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#redirectToRoute.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#render.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#renderView.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/657d22547c85f350850e6e809be52d5c2c0d77f6#stream.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/67eb7bfea1185df6f89e00b524571fd0d36ed768#indexAction.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/67eb7bfea1185df6f89e00b524571fd0d36ed768.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/annotations/69b748bbdb21c9dbce0109b52d28fc1d6404463b#setContainer.cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/appProdProjectContainer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/appProdUrlMatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/cache/prod/classes.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/DefaultControllerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Resources/meta/LICENSE" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/.gitignore" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/.travis.yml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/DependencyInjection/Compiler/AddProcessorsPass.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/DependencyInjection/Compiler/AddProcessorsPass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Compiler/AddProcessorsPassTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Compiler/AddProcessorsPassTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/DependencyInjection/Compiler/AddSwiftMailerTransportPass.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/DependencyInjection/Compiler/AddSwiftMailerTransportPass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Compiler/AddSwiftMailerTransportPassTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Compiler/AddSwiftMailerTransportPassTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/DependencyInjection/AppBundleExtension.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/DependencyInjection/Configuration.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/testers/index.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/Anwser/Anwser.php" afterPath="$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/Anwser/Anwser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/Anwser/AnwserCollection.php" afterPath="$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/Anwser/AnwserCollection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/Anwser/AnwserTextarea.php" afterPath="$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/Anwser/AnwserTextarea.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/BeginController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/BeginController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/DependencyInjection/Configuration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/ConfigurationTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/ConfigurationTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/DependencyInjection/Compiler/DebugHandlerPass.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/DependencyInjection/Compiler/DebugHandlerPass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/DependencyInjectionTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/DependencyInjectionTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/FixtureMonologExtensionTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/FixtureMonologExtensionTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/DependencyInjection/Compiler/LoggerChannelPass.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/DependencyInjection/Compiler/LoggerChannelPass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Compiler/LoggerChannelPassTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Compiler/LoggerChannelPassTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/MonologBundle.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/MonologBundle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/DependencyInjection/MonologExtension.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/DependencyInjection/MonologExtension.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/MonologExtensionTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/MonologExtensionTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/NotFoundActivationStrategy.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/NotFoundActivationStrategy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/NotFoundActivationStrategyTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/NotFoundActivationStrategyTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Question.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Question.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/QuestionToUserSetRepository.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/QuestionToUserSetRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/README.md" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ThxController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ThxController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/XmlMonologExtensionTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/XmlMonologExtensionTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/YamlMonologExtensionTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/YamlMonologExtensionTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/User/QuizUser.php" afterPath="$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/User/QuizUser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/begin/answer.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/begin/answer.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.php.meta" afterPath="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.php.meta" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.php" afterPath="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainerCompiler.log" afterPath="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainerCompiler.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bootstrap.php.cache" afterPath="$PROJECT_DIR$/app/bootstrap.php.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/dev/classes.map" afterPath="$PROJECT_DIR$/app/cache/dev/classes.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/composer.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config_dev.yml" afterPath="$PROJECT_DIR$/app/config/config_dev.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config_test.yml" afterPath="$PROJECT_DIR$/app/config/config_test.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/logs/dev.log" afterPath="$PROJECT_DIR$/app/logs/dev.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/handlers_with_channels.xml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/handlers_with_channels.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/handlers_with_channels.yml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/handlers_with_channels.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/quiz/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/quiz/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Resources/config/schema/monolog-1.0.xsd" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Resources/config/schema/monolog-1.0.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Resources/config/monolog.xml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Resources/config/monolog.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/multiple_email_recipients.xml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/multiple_email_recipients.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/multiple_email_recipients.yml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/multiple_email_recipients.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/multiple_handlers.xml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/multiple_handlers.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/multiple_handlers.yml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/multiple_handlers.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/new_and_priority.xml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/new_and_priority.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/new_and_priority.yml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/new_and_priority.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/new_and_priority_import.xml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/new_and_priority_import.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/new_and_priority_import.yml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/new_and_priority_import.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/new_at_end.xml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/new_at_end.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/new_at_end.yml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/new_at_end.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/new_at_end_import.xml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/new_at_end_import.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/new_at_end_import.yml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/new_at_end_import.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/overwriting.xml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/overwriting.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/overwriting.yml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/overwriting.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/overwriting_import.xml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/overwriting_import.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/overwriting_import.yml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/overwriting_import.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/phpunit.xml.dist" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/phpunit.xml.dist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/single_email_recipient.xml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/xml/single_email_recipient.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/single_email_recipient.yml" afterPath="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Tests/DependencyInjection/Fixtures/yml/single_email_recipient.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/before/timer.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/before/timer.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="quizbarman.iws" />
@@ -192,91 +48,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NoSetControllerTest.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Tests/Controller/NoSetControllerTest.php">
+      <file leaf-file-name="TesterController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/TesterController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="0" selection-start="2255" selection-end="2255" vertical-scroll-proportion="-18.25926" vertical-offset="623" max-vertical-offset="1476">
+            <state line="37" column="41" selection-start="1164" selection-end="1164" vertical-scroll-proportion="-24.666666" vertical-offset="0" max-vertical-offset="882">
+              <folding>
+                <element signature="e#40#70#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/testers/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="249" selection-end="249" vertical-scroll-proportion="0.22890173" vertical-offset="0" max-vertical-offset="865">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OneSetControllerTest.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Tests/Controller/OneSetControllerTest.php">
+      <file leaf-file-name="FormProdType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/FormProdType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="14" selection-start="5091" selection-end="5091" vertical-scroll-proportion="1.1518072" vertical-offset="1492" max-vertical-offset="2826">
+            <state line="21" column="4" selection-start="504" selection-end="504" vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="792">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/quiz/index.html.twig">
+      <file leaf-file-name="TestProduct.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/TestProduct.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="69" selection-start="2257" selection-end="2263" vertical-scroll-proportion="-5.888889" vertical-offset="723" max-vertical-offset="1566">
+            <state line="67" column="27" selection-start="959" selection-end="959" vertical-scroll-proportion="-25.37037" vertical-offset="521" max-vertical-offset="1386">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/before/index.html.twig">
+      <file leaf-file-name="UserProd.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/UserProd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="79" selection-start="522" selection-end="537" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="954">
+            <state line="108" column="0" selection-start="1674" selection-end="1674" vertical-scroll-proportion="-16.0" vertical-offset="1512" max-vertical-offset="2610">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OnesetLoader.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Oneset/OnesetLoader.php">
+      <file leaf-file-name="UserForm.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/UserForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="27" selection-start="381" selection-end="381" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="432">
+            <state line="36" column="27" selection-start="667" selection-end="679" vertical-scroll-proportion="-18.0" vertical-offset="162" max-vertical-offset="1692">
+              <folding>
+                <element signature="e#36#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserProdType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/UserProdType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="918">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="one_set.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Oneset/one_set.yml">
+      <file leaf-file-name="FormProd.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/FormProd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="20" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="1548">
+            <state line="47" column="0" selection-start="793" selection-end="793" vertical-scroll-proportion="-14.037037" vertical-offset="467" max-vertical-offset="2304">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/begin/index.html.twig">
+      <file leaf-file-name="UserFormType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/UserFormType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="64" selection-start="1329" selection-end="1340" vertical-scroll-proportion="-21.333334" vertical-offset="0" max-vertical-offset="1350">
+            <state line="20" column="14" selection-start="552" selection-end="552" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="828">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timer.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/before/timer.html.twig">
+      <file leaf-file-name="services.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/services.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="88" selection-start="231" selection-end="237" vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="540">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/thx/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="50" selection-start="212" selection-end="246" vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="306">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="warning.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/before/warning.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="92" selection-start="278" selection-end="325" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="342">
+            <state line="10" column="56" selection-start="316" selection-end="333" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
               <folding />
             </state>
           </provider>
@@ -314,12 +174,10 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/ThxController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/quiz/index.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config_test.yml" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/users.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/one_set.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/two_sets.yml" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/app/config/config_dev.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Tests/Entity/QuizsetTest.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/TestLoader.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/no_set.yml" />
@@ -330,15 +188,32 @@
         <option value="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/OnesetLoader.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Oneset/one_set.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Tests/Controller/OneSetControllerTest.php" />
+        <option value="$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/Anwser/Anwser.php" />
+        <option value="$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/Anwser/AnwserTextarea.php" />
+        <option value="$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/Anwser/AnwserCollection.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/begin/answer.html.twig" />
+        <option value="$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/User/QuizUser.php" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/app/config/config_dev.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/DependencyInjection/AppBundleExtension.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/FormProd.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/UserProd.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/UserForm.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/DependencyInjection/Configuration.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/TestProduct.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Form/UserProdType.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Form/UserFormType.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/TesterController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/testers/index.html.twig" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
     <option name="y" value="27" />
-    <option name="width" value="1922" />
-    <option name="height" value="1054" />
+    <option name="width" value="1920" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -445,6 +320,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quizbarman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quizbarman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nelmio" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -613,28 +506,6 @@
               <option name="myItemId" value="Tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizbarman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizbarman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -714,7 +585,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="thx" />
+              <option name="myItemId" value="testers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -740,11 +611,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quiz" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -766,45 +633,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="begin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizbarman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizbarman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="before" />
+              <option name="myItemId" value="Form" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -848,11 +677,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DataFixtures" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ORM" />
+              <option name="myItemId" value="DependencyInjection" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -874,15 +699,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DataFixtures" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ORM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oneset" />
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -900,19 +717,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quizbarman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quizbarman" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DataFixtures" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ORM" />
+              <option name="myItemId" value="AdminBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Noset" />
+              <option name="myItemId" value="DependencyInjection" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -995,7 +822,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
+    <frame x="0" y="27" width="1920" height="1053" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1004,7 +831,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25825346" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25808135" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1035,369 +862,345 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/QuestionToUserSetRepository.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Oneset/OnesetLoader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="25" selection-start="1100" selection-end="1100" vertical-scroll-proportion="0.48754448" vertical-offset="93" max-vertical-offset="1530">
-          <folding>
-            <marker date="1443773871937" expanded="true" signature="-1:-1" placeholder="SELECT us.ha..AppBundle..." />
-          </folding>
-        </state>
+        <state line="21" column="27" selection-start="381" selection-end="381" vertical-scroll-proportion="0.4256757" vertical-offset="0" max-vertical-offset="888" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Tests/Controller/NoSetControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="45" selection-start="1881" selection-end="1881" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="1548">
+        <state line="62" column="0" selection-start="2255" selection-end="2255" vertical-scroll-proportion="0.0" vertical-offset="623" max-vertical-offset="1476" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Oneset/one_set.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="20" selection-start="812" selection-end="812" vertical-scroll-proportion="0.3071038" vertical-offset="277" max-vertical-offset="1548" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/before/timer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="88" selection-start="231" selection-end="237" vertical-scroll-proportion="0.12162162" vertical-offset="0" max-vertical-offset="888" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/before/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="79" selection-start="522" selection-end="537" vertical-scroll-proportion="0.1891892" vertical-offset="66" max-vertical-offset="954" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/thx/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="50" selection-start="212" selection-end="246" vertical-scroll-proportion="0.12162162" vertical-offset="0" max-vertical-offset="888" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/before/warning.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="92" selection-start="278" selection-end="325" vertical-scroll-proportion="0.1418919" vertical-offset="0" max-vertical-offset="888" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/quiz/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="69" selection-start="2568" selection-end="2568" vertical-scroll-proportion="0.10810811" vertical-offset="876" max-vertical-offset="1764" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Tests/Controller/OneSetControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="14" selection-start="4997" selection-end="4997" vertical-scroll-proportion="0.40231213" vertical-offset="2100" max-vertical-offset="3258" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Admin/QuizsetAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.7777777" vertical-offset="210" max-vertical-offset="1098" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/QuizBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/QuizsetAdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="72" selection-start="2699" selection-end="2699" vertical-scroll-proportion="-17.333334" vertical-offset="918" max-vertical-offset="2538" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Utils/Quiz.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="158" column="34" selection-start="3987" selection-end="3987" vertical-scroll-proportion="-13.555555" vertical-offset="2298" max-vertical-offset="3456">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/AppBundle.php">
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/QuizCollection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+        <state line="37" column="23" selection-start="739" selection-end="739" vertical-scroll-proportion="-20.666666" vertical-offset="0" max-vertical-offset="900" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/Anwser/AnwserCheckbox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1332">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Question.php">
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/Anwser/AnwserRadio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="0" selection-start="2910" selection-end="2910" vertical-scroll-proportion="-11.888889" vertical-offset="2955" max-vertical-offset="4662">
+        <state line="39" column="36" selection-start="931" selection-end="931" vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="1026">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Quizset.php">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/AdminBundle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="34" selection-start="1574" selection-end="1574" vertical-scroll-proportion="-20.88889" vertical-offset="1182" max-vertical-offset="2052">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="892">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/QuizsetRepository.php">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/QuizsetAdmin/list__action_getwinners.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="35" selection-end="70" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="684">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="892">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Users.php">
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/Anwser/Anwser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="18" selection-start="1595" selection-end="1595" vertical-scroll-proportion="-64.666664" vertical-offset="0" max-vertical-offset="2682">
+        <state line="49" column="27" selection-start="1127" selection-end="1127" vertical-scroll-proportion="0.0" vertical-offset="882" max-vertical-offset="1116">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/UsersRepository.php">
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/Anwser/AnwserTextarea.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+        <state line="55" column="0" selection-start="1100" selection-end="1100" vertical-scroll-proportion="0.7162162" vertical-offset="354" max-vertical-offset="1242">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/UsersToQuizset.php">
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/Anwser/AnwserCollection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="34" selection-start="2832" selection-end="2832" vertical-scroll-proportion="17.777779" vertical-offset="3450" max-vertical-offset="4320">
+        <state line="52" column="21" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.6148649" vertical-offset="390" max-vertical-offset="1278">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/UsersToQuizsetRepository.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/begin/answer.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="5" selection-start="825" selection-end="825" vertical-scroll-proportion="0.6192171" vertical-offset="0" max-vertical-offset="846">
+        <state line="26" column="44" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.027027028" vertical-offset="444" max-vertical-offset="1332">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/BeforeController.php">
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/Anwser/AnwserFactory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="37" selection-start="3590" selection-end="3590" vertical-scroll-proportion="-10.666667" vertical-offset="1944" max-vertical-offset="2790">
-          <folding>
-            <element signature="e#42#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/BeginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="429" selection-end="429" vertical-scroll-proportion="5.3333335" vertical-offset="432" max-vertical-offset="2970">
-          <folding>
-            <element signature="e#40#99#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/QuizController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="50" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.25266904" vertical-offset="723" max-vertical-offset="1566">
+        <state line="20" column="48" selection-start="418" selection-end="418" vertical-scroll-proportion="0.4054054" vertical-offset="0" max-vertical-offset="888">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ThxController.php">
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Utils/Anwsers/User/QuizUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="2078" selection-end="2078" vertical-scroll-proportion="0.57651246" vertical-offset="810" max-vertical-offset="2106">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/two_sets.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="21" selection-start="1641" selection-end="1641" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2034">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/hautelook/alice-bundle/Tests/Alice/DoctrineTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="69" selection-start="447" selection-end="447" vertical-scroll-proportion="0.3380783" vertical-offset="75" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/hautelook/alice-bundle/Tests/Functional/Command/DoctrineFixtureTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.0369515" vertical-offset="898" max-vertical-offset="1764">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/hautelook/alice-bundle/Solarium/DataFixtureLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="7" selection-start="452" selection-end="452" vertical-scroll-proportion="0.27020785" vertical-offset="0" max-vertical-offset="866">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/hautelook/alice-bundle/DependencyInjection/Configuration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/hautelook/alice-bundle/DependencyInjection/HautelookAliceExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/hautelook/alice-bundle/Alice/Doctrine.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/hautelook/alice-bundle/Alice/Loader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.5588914" vertical-offset="1350" max-vertical-offset="3492">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/hautelook/alice-bundle/Alice/DataFixtureLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="44" selection-start="1130" selection-end="1130" vertical-scroll-proportion="-0.5160142" vertical-offset="1065" max-vertical-offset="1908">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/nelmio/alice/src/Nelmio/Alice/Fixtures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="86.0" vertical-offset="2322" max-vertical-offset="3348">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/nelmio/alice/src/Nelmio/Alice/LoaderInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="3.2592592" vertical-offset="88" max-vertical-offset="954">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/nelmio/alice/src/Nelmio/Alice/ORMInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="893">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/nelmio/alice/src/Nelmio/Alice/ProcessorInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="893">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/nelmio/alice/src/Nelmio/Alice/Loader/Base.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13860">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/nelmio/alice/src/Nelmio/Alice/Loader/Yaml.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2088">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="916">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="893">
+        <state line="51" column="5" selection-start="1322" selection-end="1322" vertical-scroll-proportion="-18.88889" vertical-offset="300" max-vertical-offset="1188">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config_test.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="22" selection-start="530" selection-end="530" vertical-scroll-proportion="0.50391936" vertical-offset="0" max-vertical-offset="893">
+        <state line="25" column="22" selection-start="530" selection-end="530" vertical-scroll-proportion="0.4918033" vertical-offset="0" max-vertical-offset="915">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/BeginController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="33" selection-start="180" selection-end="180" vertical-scroll-proportion="0.10078388" vertical-offset="0" max-vertical-offset="893">
+        <state line="17" column="7" selection-start="390" selection-end="437" vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/BeforeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="76" selection-start="1410" selection-end="1478" vertical-scroll-proportion="-18.88889" vertical-offset="408" max-vertical-offset="1296">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/AppBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/DependencyInjection/AppBundleExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="768" selection-end="768" vertical-scroll-proportion="-16.0" vertical-offset="0" max-vertical-offset="540">
+          <folding>
+            <element signature="e#129#170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2934">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/DependencyInjection/AdminExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="38" selection-start="310" selection-end="310" vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="612">
+          <folding>
+            <element signature="e#51#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/DependencyInjection/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="5" selection-start="468" selection-end="862" vertical-scroll-proportion="-18.0" vertical-offset="0" max-vertical-offset="630">
+          <folding>
+            <element signature="e#51#111#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/DependencyInjection/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="7" selection-start="319" selection-end="319" vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="540">
+          <folding>
+            <element signature="e#129#189#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="2430">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1566">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="892">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="892">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.79843223" vertical-offset="169" max-vertical-offset="1062">
+        <state line="54" column="32" selection-start="1669" selection-end="1669" vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="1152">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="66" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.47806004" vertical-offset="0" max-vertical-offset="866">
+        <state line="19" column="0" selection-start="732" selection-end="732" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="1044">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Noset/TestLoader.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="35" selection-start="387" selection-end="387" vertical-scroll-proportion="0.33256352" vertical-offset="0" max-vertical-offset="866">
+        <state line="10" column="56" selection-start="316" selection-end="333" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/TestProduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="27" selection-start="959" selection-end="959" vertical-scroll-proportion="-25.37037" vertical-offset="521" max-vertical-offset="1386">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/FormProdType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="4" selection-start="504" selection-end="504" vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="792">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/UserProd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="0" selection-start="1674" selection-end="1674" vertical-scroll-proportion="-16.0" vertical-offset="1512" max-vertical-offset="2610">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/UserForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="27" selection-start="667" selection-end="679" vertical-scroll-proportion="-18.0" vertical-offset="162" max-vertical-offset="1692">
           <folding>
-            <element signature="e#125#175#0" expanded="true" />
+            <element signature="e#36#68#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Noset/no_set.yml">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/FormProd.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="21" selection-start="52" selection-end="60" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
+        <state line="47" column="0" selection-start="793" selection-end="793" vertical-scroll-proportion="-14.037037" vertical-offset="467" max-vertical-offset="2304">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/phpunit.xml.dist">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/UserProdType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="72" selection-start="1159" selection-end="1159" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="774">
+        <state line="11" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="918">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Tests/Entity/QuizsetTest.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/UserFormType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="629" selection-end="629" vertical-scroll-proportion="-18.407408" vertical-offset="97" max-vertical-offset="990">
+        <state line="20" column="14" selection-start="552" selection-end="552" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="828">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/TesterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="41" selection-start="1164" selection-end="1164" vertical-scroll-proportion="-24.666666" vertical-offset="0" max-vertical-offset="882">
           <folding>
-            <element signature="e#41#70#0" expanded="true" />
+            <element signature="e#40#70#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Response.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/testers/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="496" column="20" selection-start="15893" selection-end="15893" vertical-scroll-proportion="0.34349355" vertical-offset="8509" max-vertical-offset="22824">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/begin/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="64" selection-start="1329" selection-end="1340" vertical-scroll-proportion="-21.333334" vertical-offset="0" max-vertical-offset="1350">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Oneset/OnesetLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="27" selection-start="381" selection-end="381" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="432">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Tests/Controller/NoSetControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="2255" selection-end="2255" vertical-scroll-proportion="-18.25926" vertical-offset="623" max-vertical-offset="1476">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Oneset/one_set.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="20" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="1548">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/before/timer.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="88" selection-start="231" selection-end="237" vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="540">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/before/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="79" selection-start="522" selection-end="537" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="954">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/thx/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="50" selection-start="212" selection-end="246" vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="306">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/before/warning.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="92" selection-start="278" selection-end="325" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="342">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/quiz/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="69" selection-start="2257" selection-end="2263" vertical-scroll-proportion="-5.888889" vertical-offset="723" max-vertical-offset="1566">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Tests/Controller/OneSetControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="14" selection-start="5091" selection-end="5091" vertical-scroll-proportion="1.1518072" vertical-offset="1492" max-vertical-offset="2826">
+        <state line="11" column="0" selection-start="249" selection-end="249" vertical-scroll-proportion="0.22890173" vertical-offset="0" max-vertical-offset="865">
           <folding />
         </state>
       </provider>
