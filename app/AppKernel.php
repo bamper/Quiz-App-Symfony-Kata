@@ -32,6 +32,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new QuizBundle\QuizBundle(),
             new AdminBundle\AdminBundle(),
+            new KataBundle\KataBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

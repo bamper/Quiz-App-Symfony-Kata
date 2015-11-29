@@ -1,0 +1,4 @@
+services:
+#    kata.example:
+#        class: KataBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
