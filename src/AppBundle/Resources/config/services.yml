@@ -1,17 +1,1 @@
 services:
-  app.form_formprod.prod_type:
-    class: AppBundle\Form\FormProdType
-    tags:
-      - { name: form.type, alias: form_prod }
-
-  app.form_userform.user_type:
-      class: AppBundle\Form\UserFormType
-      arguments: [@doctrine.orm.default_entity_manager]
-      tags:
-        - { name: 'form.type', alias: 'app_form_userform' }
-
-  app.form_userprod.prod_type:
-        class: AppBundle\Form\UserProdType
-        arguments: [@doctrine.orm.default_entity_manager]
-        tags:
-          - { name: 'form.type', alias: 'userprod_form' }

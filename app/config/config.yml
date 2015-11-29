@@ -79,7 +79,7 @@ doctrine:
                     FOSUserBundle: ~
                     AdminBundle: ~
                     AppBundle: ~
-
+                    KataBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:
