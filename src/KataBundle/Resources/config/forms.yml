@@ -1,0 +1,20 @@
+services:
+  kata.form.adress_type:
+      class: KataBundle\Form\AdressType
+      tags:
+        - { name: form.type, alias: adress }
+
+  kata.form.user_type:
+      class: KataBundle\Form\UserType
+      tags:
+        - { name: form.type, alias: user }
+
+  kata.form.adress_select_type:
+      class: KataBundle\Form\AdressSelectType
+      tags:
+        - { name: form.type, alias: kata_adress_select }
+
+  kata.form.fieldset_type:
+    class: KataBundle\Form\FieldsetType
+    tags:
+      - { name: form.type, alias: fieldset_type }

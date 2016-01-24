@@ -1,3 +1,15 @@
 kata_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: KataBundle:Default:index }
+    path:     /
+    defaults:
+      _controller: KataBundle:Default:index
+
+kata_adress:
+    path:     /adress
+    defaults:
+      _controller: KataBundle:Default:adress
+
+
+kata_user:
+    path: /user
+    defaults:
+      _controller: KataBundle:Default:user

@@ -1,0 +1,30 @@
+{% block adress_widget %}
+    <div class="dupa">
+        To jest adress <br />
+        {{ block('form_widget') }}
+    </div>
+{% endblock %}
+
+{% block _user_diff_name_widget %}
+    <div>Lista Adresów pod innym templatem</div>
+
+    {% if test_msg is defined %}
+        <p>{{ test_msg }}</p>
+    {% endif %}
+    {{ block('kata_adress_select_widget') }}
+{% endblock %}
+
+{% block _user_custom_name_widget %}
+    <div>To jest customowy template</div>
+    {{ block('form_widget_simple') }}
+{% endblock %}
+
+{% block kata_adress_select_widget %}
+    <div class="dupa">
+        To jest adress w postaci selecta <br />
+        {{ block('form_widget') }}
+    </div>
+{% endblock %}
+
+
+

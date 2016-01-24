@@ -62,5 +62,10 @@ class Adress
     {
         return $this->street;
     }
+
+    public function __toString()
+    {
+        return $this->street;
+    }
 }
 
