@@ -27,6 +27,7 @@
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="QuizBundle">QuizBundle\QuizBundle</parameter>
       <parameter key="AdminBundle">AdminBundle\AdminBundle</parameter>
+      <parameter key="KataBundle">KataBundle\KataBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -459,7 +460,7 @@
     <parameter key="assetic.java.bin">/usr/bin/java</parameter>
     <parameter key="assetic.node.bin">/usr/local/bin/node</parameter>
     <parameter key="assetic.ruby.bin">/usr/bin/ruby</parameter>
-    <parameter key="assetic.sass.bin">/usr/bin/sass</parameter>
+    <parameter key="assetic.sass.bin">/usr/local/bin/sass</parameter>
     <parameter key="assetic.reactjsx.bin">/usr/bin/jsx</parameter>
     <parameter key="assetic.filter.cssrewrite.class">Assetic\Filter\CssRewriteFilter</parameter>
     <parameter key="assetic.twig_extension.functions" type="collection"/>
@@ -1815,6 +1816,7 @@
             <argument>/home/red/Workspace/pandemonium/quizbarman/vendor/sonata-project/user-bundle/Resources/translations/SonataUserBundle.fr.xliff</argument>
             <argument>/home/red/Workspace/pandemonium/quizbarman/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.fr.xliff</argument>
             <argument>/home/red/Workspace/pandemonium/quizbarman/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.fr.xliff</argument>
+            <argument>/home/red/Workspace/pandemonium/quizbarman/src/KataBundle/Resources/translations/messages.fr.xlf</argument>
           </argument>
           <argument key="pt_BR" type="collection">
             <argument>/home/red/Workspace/pandemonium/quizbarman/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pt_BR.xlf</argument>
@@ -2311,6 +2313,17 @@
               <argument key="sonata_type_filter_date_range">sonata.admin.form.filter.type.daterange</argument>
               <argument key="sonata_type_filter_datetime">sonata.admin.form.filter.type.datetime</argument>
               <argument key="sonata_type_filter_datetime_range">sonata.admin.form.filter.type.datetime_range</argument>
+              <argument key="adress">kata.form.adress_type</argument>
+              <argument key="user">kata.form.user_type</argument>
+              <argument key="kata_adress_select">kata.form.adress_select_type</argument>
+              <argument key="school">kata.form.school_type</argument>
+              <argument key="usergroup">kata.form.user_group_type</argument>
+              <argument key="product">kata.form.product_type</argument>
+              <argument key="feature">kata.form.feature_type</argument>
+              <argument key="customer">kata.form.customer_type</argument>
+              <argument key="category">kata.form.category_type</argument>
+              <argument key="cart">kata.form.cart_type</argument>
+              <argument key="fieldset_type">kata.form.fieldset_type</argument>
             </argument>
             <argument type="collection">
               <argument key="form" type="collection">
@@ -3031,7 +3044,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>564390a00a2038.21280096</argument>
+            <argument>56b7906f110839.25354105</argument>
           </service>
         </argument>
         <argument type="service">
@@ -3045,7 +3058,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>564390a00a2038.21280096</argument>
+            <argument>56b7906f110839.25354105</argument>
           </service>
         </argument>
       </argument>
@@ -3459,7 +3472,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>564390a00a2038.21280096</argument>
+            <argument>56b7906f110839.25354105</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -3582,7 +3595,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>564390a00a2038.21280096</argument>
+            <argument>56b7906f110839.25354105</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -4210,6 +4223,7 @@
               <argument key="FOSUserBundle">FOS\UserBundle\Entity</argument>
               <argument key="AdminBundle">AdminBundle\Entity</argument>
               <argument key="AppBundle">AppBundle\Entity</argument>
+              <argument key="KataBundle">KataBundle\Entity</argument>
             </argument>
           </call>
           <call method="setMetadataCacheImpl">
@@ -4259,6 +4273,7 @@
                       <argument type="collection">
                         <argument>/home/red/Workspace/pandemonium/quizbarman/src/AdminBundle/Entity</argument>
                         <argument>/home/red/Workspace/pandemonium/quizbarman/src/AppBundle/Entity</argument>
+                        <argument>/home/red/Workspace/pandemonium/quizbarman/src/KataBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
@@ -4271,10 +4286,24 @@
                       <argument type="collection">
                         <argument>/home/red/Workspace/pandemonium/quizbarman/src/AdminBundle/Entity</argument>
                         <argument>/home/red/Workspace/pandemonium/quizbarman/src/AppBundle/Entity</argument>
+                        <argument>/home/red/Workspace/pandemonium/quizbarman/src/KataBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
                   <argument>AppBundle\Entity</argument>
+                </call>
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                      <argument type="service" id="annotation_reader"/>
+                      <argument type="collection">
+                        <argument>/home/red/Workspace/pandemonium/quizbarman/src/AdminBundle/Entity</argument>
+                        <argument>/home/red/Workspace/pandemonium/quizbarman/src/AppBundle/Entity</argument>
+                        <argument>/home/red/Workspace/pandemonium/quizbarman/src/KataBundle/Entity</argument>
+                      </argument>
+                    </service>
+                  </argument>
+                  <argument>KataBundle\Entity</argument>
                 </call>
               </service>
             </argument>
@@ -5604,6 +5633,39 @@
       <argument type="service" id="form.factory"/>
       <argument>Sonata\AdminBundle\Security\Acl\Permission\MaskBuilder</argument>
     </service>
+    <service id="kata.form.adress_type" class="KataBundle\Form\AdressType">
+      <tag name="form.type" alias="adress"/>
+    </service>
+    <service id="kata.form.user_type" class="KataBundle\Form\UserType">
+      <tag name="form.type" alias="user"/>
+    </service>
+    <service id="kata.form.adress_select_type" class="KataBundle\Form\AdressSelectType">
+      <tag name="form.type" alias="kata_adress_select"/>
+    </service>
+    <service id="kata.form.school_type" class="KataBundle\Form\SchoolType">
+      <tag name="form.type" alias="school"/>
+    </service>
+    <service id="kata.form.user_group_type" class="KataBundle\Form\UserGroupType">
+      <tag name="form.type" alias="usergroup"/>
+    </service>
+    <service id="kata.form.product_type" class="KataBundle\Form\ProductType">
+      <tag name="form.type" alias="product"/>
+    </service>
+    <service id="kata.form.feature_type" class="KataBundle\Form\FeatureType">
+      <tag name="form.type" alias="feature"/>
+    </service>
+    <service id="kata.form.customer_type" class="KataBundle\Form\CustomerType">
+      <tag name="form.type" alias="customer"/>
+    </service>
+    <service id="kata.form.category_type" class="KataBundle\Form\CategoryType">
+      <tag name="form.type" alias="category"/>
+    </service>
+    <service id="kata.form.cart_type" class="KataBundle\Form\CartType">
+      <tag name="form.type" alias="cart"/>
+    </service>
+    <service id="kata.form.fieldset_type" class="KataBundle\Form\FieldsetType">
+      <tag name="form.type" alias="fieldset_type"/>
+    </service>
     <service id="data_collector.dump" class="Symfony\Component\HttpKernel\DataCollector\DumpDataCollector">
       <tag name="data_collector" id="dump" template="@Debug/Profiler/dump.html.twig"/>
       <argument type="service" id="debug.stopwatch" on-invalid="ignore"/>
@@ -6031,6 +6093,10 @@
       <call method="addPath">
         <argument>/home/red/Workspace/pandemonium/quizbarman/src/AdminBundle/Resources/views</argument>
         <argument>Admin</argument>
+      </call>
+      <call method="addPath">
+        <argument>/home/red/Workspace/pandemonium/quizbarman/src/KataBundle/Resources/views</argument>
+        <argument>Kata</argument>
       </call>
       <call method="addPath">
         <argument>/home/red/Workspace/pandemonium/quizbarman/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>

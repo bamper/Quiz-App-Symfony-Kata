@@ -30,14 +30,6 @@ class Feature
     private $name;
 
     /**
-     * @var Product
-     *
-     * @ORM\ManyToOne(targetEntity="Product", inversedBy="features")
-     * @ORM\JoinColumn(name="product_id", referencedColumnName="id")
-     */
-    private $product;
-
-    /**
      * Get id
      *
      * @return integer
@@ -45,24 +37,6 @@ class Feature
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * @return Product
-     */
-    public function getProduct()
-    {
-        return $this->product;
-    }
-
-    /**
-     * @param Product $product
-     * @return $this
-     */
-    public function setProduct(Product $product)
-    {
-        $this->product = $product;
-        return $this;
     }
 
     /**

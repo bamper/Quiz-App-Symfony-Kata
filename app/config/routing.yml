@@ -1,6 +1,6 @@
 kata:
     resource: "@KataBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /kata
 
 app:
     resource: "@AppBundle/Controller/"

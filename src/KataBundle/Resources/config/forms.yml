@@ -14,6 +14,41 @@ services:
       tags:
         - { name: form.type, alias: kata_adress_select }
 
+  kata.form.school_type:
+      class: KataBundle\Form\SchoolType
+      tags:
+        - { name: form.type, alias: school }
+
+  kata.form.user_group_type:
+      class: KataBundle\Form\UserGroupType
+      tags:
+        - { name: form.type, alias: usergroup }
+
+  kata.form.product_type:
+      class: KataBundle\Form\ProductType
+      tags:
+         - { name: form.type, alias: product }
+
+  kata.form.feature_type:
+      class: KataBundle\Form\FeatureType
+      tags:
+         - { name: form.type, alias: feature }
+
+  kata.form.customer_type:
+      class: KataBundle\Form\CustomerType
+      tags:
+         - { name: form.type, alias: customer }
+
+  kata.form.category_type:
+      class: KataBundle\Form\CategoryType
+      tags:
+         - { name: form.type, alias: category }
+
+  kata.form.cart_type:
+      class: KataBundle\Form\CartType
+      tags:
+         - { name: form.type, alias: cart }
+
   kata.form.fieldset_type:
     class: KataBundle\Form\FieldsetType
     tags:

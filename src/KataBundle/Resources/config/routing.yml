@@ -6,10 +6,44 @@ kata_homepage:
 kata_adress:
     path:     /adress
     defaults:
-      _controller: KataBundle:Default:adress
-
+      _controller: KataBundle:Adress:index
 
 kata_user:
     path: /user
     defaults:
-      _controller: KataBundle:Default:user
+      _controller: KataBundle:User:index
+
+kata_school:
+    path: /school
+    defaults:
+      _controller: KataBundle:School:index
+
+kata_usergroup:
+    path: /usergroup
+    defaults:
+      _controller: KataBundle:UserGroup:index
+
+kata_product:
+    path: /product
+    defaults:
+      _controller: KataBundle:Product:index
+
+kata_feature:
+    path: /feature
+    defaults:
+      _controller: KataBundle:Feature:index
+
+kata_customer:
+    path: /customer
+    defaults:
+      _controller: KataBundle:Customer:index
+
+kata_category:
+    path: /category
+    defaults:
+      _controller: KataBundle:Category:index
+
+kata_cart:
+    path: /cart
+    defaults:
+      _controller: KataBundle:Cart:index

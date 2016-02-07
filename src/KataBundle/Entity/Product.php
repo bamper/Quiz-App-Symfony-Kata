@@ -46,7 +46,11 @@ class Product
     /**
      * @var ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="Feature", mappedBy="product")
+     * @ORM\ManyToMany(targetEntity="Feature")
+     * @ORM\JoinTable(name="product_feature",
+     *      joinColumns={@ORM\JoinColumn(name="product_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="feature_id", referencedColumnName="id")}
+     * ))
      */
     private $features;
 
